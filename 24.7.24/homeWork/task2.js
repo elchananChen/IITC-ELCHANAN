@@ -1,21 +1,19 @@
 // fanction
 
-// 1.a.
-function greet(firstName, lastName) {
-  console.log(firstName, lastName, "you are the best");
-}
-greet("yosi", "jun");
+// // 1.a.
+// function greet(firstName, lastName) {
+//   console.log(firstName, lastName, "you are the best");
+// }
+// greet("yosi", "jun");
 
 // 1.b/c
-// function fullName(firstName, lastName) {
-//   console.log(
-//     "Hallo",
-//     `${firstName}`,
-//     `${lastName}!`,
-//     " Welcome to the IITC Bootcamp"
-//   );
+
+// function greet(firstName, lastName) {
+//   let fullName = `${firstName}, ${lastName}!`;
+//   console.log("Hallo", fullName, " Welcome to the IITC Bootcamp");
 // }
-// fullName("yosi", "jan");
+// greet("yosi", "jun");
+// // 👍
 
 // 2. string metods
 
@@ -27,4 +25,3 @@ greet("yosi", "jun");
 // }
 // let finel = fullName("jone", "jan");
 // console.log(fullName);
-כעירכי;

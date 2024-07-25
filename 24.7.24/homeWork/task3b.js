@@ -4,12 +4,13 @@
 // else if (age >= 13 && age <= 17) console.log("You are a teenager");
 // else if (age >= 18 && age <= 64) console.log("You are an adult");
 // else console.log("You are a senior");
-גכעגכע;
+
 let day = "monday";
 function getDayMessage(dayOfWeek) {
   switch (dayOfWeek) {
-    // case "Monday" || "monday":
-    //   console.log("Start of the work week");
+    case "Monday":
+      console.log("Start of the work week");
+      break;
     case "Monday":
       console.log("Start of the work week");
       break;
