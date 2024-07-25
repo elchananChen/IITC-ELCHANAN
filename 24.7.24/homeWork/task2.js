@@ -27,3 +27,4 @@ greet("yosi", "jun");
 // }
 // let finel = fullName("jone", "jan");
 // console.log(fullName);
+כעירכי;
