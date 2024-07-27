@@ -65,3 +65,28 @@ userName = "user1";
 userName = "admin";
 console.log(userName);
 // 21
+temperature = 20;
+temperature = 20 * 1.8 + 32;
+console.log(temperature);
+// // 22
+const fruits = ["apple", "banana"];
+fruits.push("orenge");
+fruits.pop();
+// const array_fruits = [];
+// fruits[2] = "apple";
+// fruits[1] = "banana";
+// fruits[0] = "orange";
+console.log(fruits);
+
+// 23
+const person = { name: "yosy", age: 20 };
+person.city = "ptachia";
+console.log(person);
+// 24
+let count = 5;
+count = 5 - 1;
+console.log(count);
+// 25
+const greeting = "good";
+console.log(greeting, `${"morning"}`);
+// 🥴
