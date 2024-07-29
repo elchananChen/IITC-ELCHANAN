@@ -14,7 +14,7 @@ let fruits = ["ananas", "pomela", "apple"];
 
 // // 4
 
-// let num = [1, 2, 3, 4, 5];
+let num = [1, 2, 3, 4, 5];
 
 // console.log(num[2]);
 
@@ -110,6 +110,23 @@ console.log(fruits);
 
 // 17
 
+// let arrayNames = ["yosy", "dani", "shlomi"];
+// let arrayWalcomeNames = arrayNames.map(hallo);
+// function hallo(greet) {
+//   return "hallo, " + greet;
+// }
+// console.log(arrayWalcomeNames);
+
+// // 18
+
+// let arrayNumbersPositive = [21, 43, 0];
+
+// let checkPositive = arrayNumbersPositive.every(ifPositive);
+// function ifPositive(positive) {
+//   return positive > 0;
+// }
+// console.log(checkPositive);
+
 // 19
 
 // arrayNumbers = [1, 10, 5, 4, 5, 345, 5, 1];
@@ -118,3 +135,13 @@ console.log(fruits);
 //   return number > 10;
 // }
 // console.log(biggerThenTen);
+
+// 20
+
+// let checkBanana = fruits.some(ifBanana);
+// function ifBanana(banana) {
+//   return banana === "banana";
+// }
+// console.log(checkBanana);
+
+// 21
