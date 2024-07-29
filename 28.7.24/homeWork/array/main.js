@@ -26,7 +26,7 @@ let num = [1, 2, 3, 4, 5];
 // // 6
 
 const colors = [];
-colors.push("red", "green", "blue");
+colors.push("red", "green", "blue", "purple");
 console.log(colors);
 
 // // 7
@@ -156,4 +156,19 @@ console.log(fruits);
 //   console.log(squer * squer);
 // }
 
-// 23
+// // 23
+
+// let arrayWords = ["long", "short", "medium"];
+// console.log((arrayMoreThenFive = arrayWords.filter(ifMoreThenFive)));
+// function ifMoreThenFive(five) {
+//   const ifLongEnough = "check";
+//   return five > ifLongEnough.length();
+// }
+// // at least I tried..🙄
+
+// // 24
+
+let includesPurple = colors.includes("purple");
+console.log(includesPurple);
+
+// 25
