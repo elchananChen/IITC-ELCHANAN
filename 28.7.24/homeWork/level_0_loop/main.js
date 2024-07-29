@@ -60,9 +60,9 @@
 
 // 11
 
-// for (let i = 0; i < 1; i++) {
-//   console.log("*****");
-// }  //🤔  ?? נחשב
+// for (let i = 1; i < 2; i++) {
+//   console.log("*".repeat(4));
+// }
 
 // 12
 
@@ -78,14 +78,42 @@
 
 // // 14
 
-// // for (let i = Number("a"); i < Number("f"); i++) {
+// // for (let i = Number("a"); i < Number("f"); i++) { // ❌
 // //   console.log(i);
 // // }
 
-// // console.log("a" < "b");
+// // console.log("a" < "b");x
 
-arrayAbc = ["a", "b", "c", "d", "e", "f", "g"];
+// arrayAbc = ["a", "b", "c", "d", "e", "f", "g"]; //✔
 
-for (let i = 0; i < 6; i++) {
-  console.log(i);
-}
+// for (let i = 0; i < arrayAbc.length; i++) {
+//   let abc = arrayAbc[i];
+//   if (abc >  "e") {
+//     break;
+//   }
+//   console.log(abc);
+// }
+
+// 15
+
+// for (let i = 0; i < 1; i++) {
+//   console.log(" 2".repeat(4));
+// }
+
+// 16
+// let arrayNumbers = [1, 2, 3, 4, 5];
+
+// for (let i = 0; i < arrayNumbers.length; i++) {
+//   const printArrayNumbers = arrayNumbers[i];
+//   console.log(printArrayNumbers);
+// }
+
+// 17
+
+// let arrayAbc = ["a", "b", "c", "d"];
+// for (let i = 0; i < arrayAbc.length; i++) {
+//   let abc = arrayAbc[i];
+//   console.log(abc);
+// }
+
+// 18

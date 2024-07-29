@@ -61,22 +61,22 @@ console.log(colors);
 
 // // 🤔
 
-// let numTwo = [];
-// for (let i = 0; i < 5; i++) {
-//   let randomNum = Math.floor(Math.random() * 100);
-//   numTwo.push(randomNum);
+let numTwo = [];
+for (let i = 0; i < 5; i++) {
+  let randomNum = Math.floor(Math.random() * 100);
+  numTwo.push(randomNum);
 
-//   console.log(numTwo);
-// }
+  console.log(numTwo);
+}
 
-// let max = 0;
+let max = 0;
 
-// for (let i = 0; i < numTwo.length; i++) {
-//   if (max < numTwo[i]) {
-//     max = numTwo[i];
-//   }
-// }
-// console.log(max);
+for (let i = 0; i < numTwo.length; i++) {
+  if (max < numTwo[i]) {
+    max = numTwo[i];
+  }
+}
+console.log(max);
 
 // // 12;
 // fruitsTwo = fruits.slice(1, 3);
