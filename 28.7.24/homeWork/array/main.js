@@ -1,63 +1,120 @@
-// 1
+// // 1
 
 let fruits = ["ananas", "pomela", "apple"];
 
-// 2
+// // 2
 
-fruits.push("banana");
-console.log(fruits);
+// fruits.push("banana");
+// console.log(fruits);
 
-// 3
+// // 3
 
-fruits.pop();
-console.log(fruits);
+// fruits.pop();
+// console.log(fruits);
 
-// 4
+// // 4
 
-let num = [1, 2, 3, 4, 5];
+// let num = [1, 2, 3, 4, 5];
 
-console.log(num[2]);
+// console.log(num[2]);
 
-// 5
-// fruits.incdexOf[1 = "kiwi"];
-fruits[1] = "kiwi";
-console.log(fruits);
+// // 5
+// // fruits.incdexOf[1 = "kiwi"];
+// fruits[1] = "kiwi";
+// console.log(fruits);
 
-// 6
+// // 6
 
 const colors = [];
 colors.push("red", "green", "blue");
 console.log(colors);
 
-// 7
+// // 7
 
-colors.shift();
-console.log(colors);
+// colors.shift();
+// console.log(colors);
 
-// 8
+// // 8
 
-colors.unshift("yellow");
-console.log(colors);
+// colors.unshift("yellow");
+// console.log(colors);
 
-// 9
+// // 9
 
-num = [1, 2, 3, 4];
-let sum = 0;
-for (let i = 0; i <= num.length; i++) {
-  console.log((sum += i));
-}
-
-// 10
-
-console.log(colors.indexOf("yellow"));
-
-// 11
-
-// let numTwo = [5, 0, 342, 5232342, 4];
-
-// for (let i = 0; i < numTwo.length; i++) {
-//   if (numTwo[i] > numTwo[i])
-//     console.log(numTwo[i]);
+// num = [1, 2, 3, 4];
+// let sum = 0;
+// for (let i = 0; i <= num.length; i++) {
+//   console.log((sum += i));
 // }
 
-// //🤔
+// // 10
+
+// console.log(colors.indexOf("yellow"));
+
+// // 11
+
+// // let numTwo = [5, 0, 342, 5232342, 4];
+
+// // for (let i = 0; i < numTwo.length; i++) {
+// //   if (numTwo[i] > numTwo[i]) console.log(numTwo[i]);
+// // }
+
+// // 🤔
+
+// let numTwo = [];
+// for (let i = 0; i < 5; i++) {
+//   let randomNum = Math.floor(Math.random() * 100);
+//   numTwo.push(randomNum);
+
+//   console.log(numTwo);
+// }
+
+// let max = 0;
+
+// for (let i = 0; i < numTwo.length; i++) {
+//   if (max < numTwo[i]) {
+//     max = numTwo[i];
+//   }
+// }
+// console.log(max);
+
+// // 12;
+// fruitsTwo = fruits.slice(1, 3);
+// console.log(fruitsTwo);
+
+// // 13
+
+// let arrayNumbers = [10, 343, 343, 434, 5, 100];
+// console.log((arrayEvenNumbers = arrayNumbers.filter(ifEven)));
+// function ifEven(modulus) {
+//   return modulus % 2 === 0;
+// }
+
+// 14
+
+// let colorString = colors.join();
+// console.log(colorString);
+
+// 15
+
+let arrayNumberOne = [2, 8, 29, 664];
+let arrayNumbertwo = [3, 92, 40, 3];
+
+let arrayConnectedNumber = arrayNumberOne.concat(arrayNumbertwo);
+console.log(arrayConnectedNumber);
+
+// 16
+
+fruits.reverse();
+console.log(fruits);
+
+// 17
+
+// 19
+
+// arrayNumbers = [1, 10, 5, 4, 5, 345, 5, 1];
+// let biggerThenTen = arrayNumbers.find(check);
+// function check(number) {
+//   return number > 10;
+// }
+// console.log(biggerThenTen);

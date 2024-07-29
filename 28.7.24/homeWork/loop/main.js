@@ -37,27 +37,27 @@
 
 // // 1
 
-let count = 1;
-while (count <= 10) {
-  console.log(count);
-  count += 1;
-}
+// let count = 1;
+// while (count <= 10) {
+//   console.log(count);
+//   count += 1;
+// }
 
-// 2
+// // 2
 
-let double = 1;
-while (double <= 100) {
-  console.log(double);
-  double *= 2;
-}
+// let double = 1;
+// while (double <= 100) {
+//   console.log(double);
+//   double *= 2;
+// }
 
-// 3
+// // 3
 
-let down = 20;
-while (down >= 0) {
-  console.log(down);
-  down -= 1;
-}
+// let down = 20;
+// while (down >= 0) {
+//   console.log(down);
+//   down -= 1;
+// }
 
 // 4
 
@@ -70,12 +70,30 @@ while (down >= 0) {
 
 // 5
 
-let num = 5;
-let guess;
+// let num = 5;
+// let guess;
 
-while (num !== guess) {
-  guess = Math.floor(Math.random() * 10);
-  console.log(guess);
-}
+// while (num !== guess) {
+//   guess = Math.floor(Math.random() * 10);
+//   console.log(guess);
+// }
 
 // do ... while
+
+// 1
+
+// let i = 1;
+// do {
+//   console.log(++i);
+// } while (i <= 5);
+
+// ++i מבצע קודם את הפעולה ואז שואל (יוציא 6 )
+// i++ מדפיס ואז מבצע את הפעולה (יוציא רק עד 5 )
+
+// // 2
+
+// let again = "you want to play again?";
+// let answer = "yes";
+// do {
+//   console.log(again);
+// } while (again === answer);
