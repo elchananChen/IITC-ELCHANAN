@@ -11,16 +11,16 @@
 // }
 
 // 3
-// let sum = 0;
+let sum = 0;
 
-// for (let i = 0; i <= 10; i++) {
-//   console.log((sum += i));
-// }
-//   // sum = sum + i
-//   // sum = 0 + 0 = 0
-//   // sum = 0 + 1 = 1
-//   // sum = 1 + 2 = 3
-//  // sum = 4 + 3 = 7
+for (let i = 0; i <= 10; i++) {
+  console.log((sum += i));
+}
+// sum = sum + i
+// sum = 0 + 0 = 0
+// sum = 0 + 1 = 1
+// sum = 1 + 2 = 3
+// sum = 4 + 3 = 7
 // 4
 
 // for (i = 5; i <= 50; i += 5) {

@@ -145,3 +145,15 @@ console.log(fruits);
 // console.log(checkBanana);
 
 // 21
+// 🥴
+
+//  22
+
+// let arraySquer = [];
+
+// for (let i = 0; i < 10; i++) {
+//   let squer = arraySquer.push(i);
+//   console.log(squer * squer);
+// }
+
+// 23
