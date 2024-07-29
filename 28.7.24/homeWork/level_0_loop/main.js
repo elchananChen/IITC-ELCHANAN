@@ -226,15 +226,18 @@
 
 // 28
 
-for (let i = 0; i < 2; i++) {
-  console.log("```");
-  if (i === 1) {
-    break;
-  }
-  for (let j = 1; j < 4; j++) {
-    console.log("1".repeat(4));
-  }
-}
+// for (let i = 0; i < 2; i++) { 🤔
+//   console.log("```");
+//   if (i === 1) {
+//     break;
+//   }
+//   let previous = 0;
+//   for (let j = 0; j < 3; j++) {
+//     previous = j + 1;
+//     let string = j.toString();
+//     console.log(string.repeat(j) + previous);
+//   }
+// }
 
 // 30
 
@@ -244,6 +247,7 @@ for (let i = 0; i < 2; i++) {
 //     break;
 //   }
 //   for (let j = 1; j < 4; j++) {
-//     console.log(j.repeat(j));
+//     let string = j.toString();
+//     console.log(string.repeat(j));
 //   }
 // }
