@@ -77,3 +77,5 @@
 // do {
 //   console.log(again);
 // } while (again === answer);
+
+console.log("a" > "b");
