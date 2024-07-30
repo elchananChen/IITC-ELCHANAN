@@ -212,7 +212,7 @@
 //   }
 // }
 
-// 27
+// // 27
 
 // for (let i = 0; i < 2; i++) {
 //   console.log("***");
@@ -224,9 +224,9 @@
 //   }
 // }
 
-// 28
+// // 28
 
-// for (let i = 0; i < 2; i++) { 🤔
+// for (let i = 0; i < 2; i++) {
 //   console.log("```");
 //   if (i === 1) {
 //     break;
@@ -234,12 +234,35 @@
 //   let previous = 0;
 //   for (let j = 0; j < 3; j++) {
 //     previous = j + 1;
-//     let string = j.toString();
-//     console.log(string.repeat(j) + previous);
+//     let string = previous.toString();
+//     console.log(previous.repeat());
 //   }
 // }
 
-// 30
+// for (let i = 0; i < 2; i++) {
+//   console.log("```");
+//   if (i === 1) {
+//     break;
+//   }
+//   let previous = 0;
+//   for (let j = 2; j <= 4; j++) {
+//     let stick = "";
+//     for (let k = 1; k < j; k++) {
+//       stick += `  ${k}`;
+//     }
+//     console.log(stick);
+//   }
+// }
+
+// let string = 0;
+// let previous = 0;
+// for (let j = 0; j < 3; j++) {
+//   //   previous = j + 1;
+//   string += j.toString();
+//   console.log(string.repeat(j));
+// }
+
+// // // 30
 
 // for (let i = 0; i < 2; i++) {
 //   console.log("```");
