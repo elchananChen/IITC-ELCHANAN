@@ -70,27 +70,110 @@
 
 // 9
 
-// function twoArrayToOne(nestedArray) {
+function twoArrayToOne(nestedArray) {
+  let newArray = [];
+  for (let i = 0; i < nestedArray.length; i++) {
+    let currentPlace = nestedArray[i];
+
+    for (let j = 0; j < currentPlace.length; j++) {
+      let isolatednumber = currentPlace[j];
+
+      newArray.push(isolatednumber);
+    }
+  }
+  console.log(newArray);
+}
+
+let twoDNum = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+console.log(twoArrayToOne(twoDNum));
+
+// 10
+
+// function metrixTransposer(nestedArray) {
 //   let newArray = [];
+//   let miniArrayOne = [];
+//   let miniArrayTwo = [];
+//   let miniArrayThree = [];
+
 //   for (let i = 0; i < nestedArray.length; i++) {
 //     let currentPlace = nestedArray[i];
-
 //     for (let j = 0; j < currentPlace.length; j++) {
-//       let isolatednumber = currentPlace[j];
-
-//       newArray.push(isolatednumber);
+//       let isolatedNumber = currentPlace[j];
+//       if (j === 0) {
+//         miniArrayOne.push(isolatedNumber);
+//       } else if (j === 1) {
+//         miniArrayTwo.push(isolatedNumber);
+//       } else if (j === 2) {
+//         miniArrayThree.push(isolatedNumber);
+//       }
 //     }
 //   }
-//   console.log(newArray);
+//   newArray.push(miniArrayOne);
+//   newArray.push(miniArrayTwo);
+//   newArray.push(miniArrayThree);
+//   return newArray;
 // }
 
 // let twoDNum = [
-//   [1, 2],
-//   [3, 4],
-//   [5, 6],
+//   [1, 2, 6],
+//   [4, 5, 6],
 // ];
-// console.log(twoArrayToOne(twoDNum));
+// console.log(metrixTransposer(twoDNum));
 
-// 😎
+//  //😎
 
-// 10
+// 11
+
+// let string = "safsart";
+// for (let i = string.length; i >= 0; i--) {
+//   console.log(string[i]);
+// }
+
+// let revers = "safsart";
+// for (let j = 0; j < revers.length; j++) {
+//   console.log(revers[j]);
+// }
+
+// function ifPalindrom(string) {
+//   let straightArray = [];
+//   let reversArray = [];
+//   for (let i = 0; i < string.length; i++) {
+//     const letter = string[i];
+//     straightArray.push(letter);
+//   }
+//   for (let j = string.length; j > 0; j--) {
+//     const reversLetter = string[j];
+//     reversArray.push(reversLetter);
+//   }
+
+//   if (straightArray === reversArray) {
+//     return `${string} is palindrom`;
+//   } else return `${string} is not a palindrom`;
+// }
+// console.log(ifPalindrom("true"));
+
+// let straightArray = [1, 2, 3];
+// let reversArray = [1, 2, 3];
+
+// console.log(straightArray === reversArray);
+
+// 11
+
+// fitusi
+
+// function ispalindrom(str) {
+//   for (let i=0; i < str.length;i++ ){
+//       //  console.log([i]);
+//     for (let j = 0; j < 1;j++ ){
+//       if (str[i] !== str[str.length - 1 - i] ){return false}
+//     }
+//   }
+//   return true
+// }
+// ispalindrom("natan")
+
+// 12
