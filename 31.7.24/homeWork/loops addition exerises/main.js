@@ -36,11 +36,12 @@
 // }
 // console.log(toSum(0));
 
-// 3  ????
-// let gess = prompt("gess the number");
+// 3
+
+// let answer = prompt("gess the number");
 // do {
-//   gess;
-// } while (gess !== 5);
+//   answer;
+// } while (Number(answer) !== 5);
 
 // 4
 

@@ -62,34 +62,79 @@
 // }
 // let twoDNum = [
 //   [1, 2],
-//   [3, 4],
+//   [3, 4],""
 //   [5, 6],
 // ];
 
 // console.log(sumTwoD(twoDNum));
 
-// 9
+// 8
 
-function twoArrayToOne(nestedArray) {
-  let newArray = [];
-  for (let i = 0; i < nestedArray.length; i++) {
-    let currentPlace = nestedArray[i];
-
-    for (let j = 0; j < currentPlace.length; j++) {
-      let isolatednumber = currentPlace[j];
-
-      newArray.push(isolatednumber);
+function toNumberOfletter(str) {
+  let letters = {};
+  for (let i = 0; i < str.length; i++) {
+    if (!letters[str[i]]) {
+      // האם האות נבדקה כבר (אם לא - נכנס ללואה שתשווה ותוסיף 1 . אם כן לא נתייחס אליה  )
+      for (let j = 0; j < str.length; j++) {
+        if (str[i] === str[j]) {
+          // האם האות שווה לאות הנסרקת אם כן נכנס לתנאי השני
+          if (!letters[str[i]]) {
+            //אם האות לא קיימת
+            letters[str[i]] = 1; //  אם לא צור אותה ותשווה לאחד
+          } else letters[str[i]]++; // אם קיים תוסיף אחד לערך
+        }
+      }
     }
   }
-  console.log(newArray);
+  return letters;
 }
+console.log(
+  toNumberOfletter(`Create an object called book with properties: title (string), author (string), and pages (number).
+Access and log the title and author of the book.
+Increase the number of pages by 50 and log the updated object.
+Hint: To increase the number of pages, you'll need to access the current value and add to it.
 
-let twoDNum = [
-  [1, 2],
-  [3, 4],
-  [5, 6],
-];
-console.log(twoArrayToOne(twoDNum));
+Learn more: MDN Web Docs - Object basics
+
+Exercise 5: Animal
+Create an object called animal with properties: species (string), sound (string), and isWild (boolean).
+Access and log the species and sound of the animal.
+Change the isWild property and log the updated object.
+Hint: Boolean values in JavaScript are true or false (without quotes).
+
+Learn more: JavaScript.info - Object properties configuration
+
+Exercise 6: Smartphone
+Create an object called smartphone with properties: brand (string), model (string), and storageGB (number).
+Access and log the brand and storageGB of the smartphone.
+Update the model of the smartphone and log the updated object.
+Hint: When logging multiple properties, you can use string concatenation or template literals.
+
+Learn more: MDN Web Docs - Template literals`)
+);
+
+// 9
+
+// function twoArrayToOne(nestedArray) {
+//   let newArray = [];
+//   for (let i = 0; i < nestedArray.length; i++) {
+//     let currentPlace = nestedArray[i];
+
+//     for (let j = 0; j < currentPlace.length; j++) {
+//       let isolatednumber = currentPlace[j];
+
+//       newArray.push(isolatednumber);
+//     }
+//   }
+//   console.log(newArray);
+// }
+
+// let twoDNum = [
+//   [1, 2],
+//   [3, 4],
+//   [5, 6],
+// ];
+// console.log(twoArrayToOne(twoDNum));
 
 // 10
 
