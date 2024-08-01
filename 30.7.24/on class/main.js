@@ -40,6 +40,6 @@
 
 // countCharInArray(names, "n");
 
-// 4
+// // 4
 
-if ( col = i)
+// // if ( col = i)
