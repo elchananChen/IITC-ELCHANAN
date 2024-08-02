@@ -313,6 +313,48 @@
 
 // 21
 
+// let number = -3;
+// let sign;
+// let parity;
+// if (number === 0) {
+//   sign = "0";
+//   parity = "even";
+// } else if (number > 0) {
+//   sign = "+";
+//   if (number % 2 === 0) {
+//     parity = "even";
+//   } else parity = "odd";
+// } else if (number < 0) {
+//   sign = "-";
+//   if (number % 2 === 0) {
+//     parity = "even";
+//   } else parity = "odd";
+// }
+// console.log(parity, sign);
+
+// 24
+
+let age = 45;
+let isEmployed = false;
+let status;
+
+if (age < 18) {
+  status = "not relevant";
+} else if (isEmployed === true) {
+  if (age >= 18) {
+    status = "employed adult";
+  }
+} else if (isEmployed === false) {
+  if (age >= 18 && age <= 26) {
+    status = " student";
+  } else if (age > 26 && age < 65) {
+    status = "unemployed adult";
+  } else if (age > 65) {
+    status = retairee;
+  }
+}
+console.log(status);
+
 // 31
 
 // let number = 3;
