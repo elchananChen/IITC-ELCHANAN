@@ -70,48 +70,48 @@
 
 // 8
 
-function toNumberOfletter(str) {
-  let letters = {};
-  for (let i = 0; i < str.length; i++) {
-    if (!letters[str[i]]) {
-      // האם האות נבדקה כבר (אם לא - נכנס ללואה שתשווה ותוסיף 1 . אם כן לא נתייחס אליה  )
-      for (let j = 0; j < str.length; j++) {
-        if (str[i] === str[j]) {
-          // האם האות שווה לאות הנסרקת אם כן נכנס לתנאי השני
-          if (!letters[str[i]]) {
-            //אם האות לא קיימת
-            letters[str[i]] = 1; //  אם לא צור אותה ותשווה לאחד
-          } else letters[str[i]]++; // אם קיים תוסיף אחד לערך
-        }
-      }
-    }
-  }
-  return letters;
-}
-console.log(
-  toNumberOfletter(`Create an object called book with properties: title (string), author (string), and pages (number).
-Access and log the title and author of the book.
-Increase the number of pages by 50 and log the updated object.
-Hint: To increase the number of pages, you'll need to access the current value and add to it.
+// function toNumberOfletter(str) {
+//   let letters = {};
+//   for (let i = 0; i < str.length; i++) {
+//     if (!letters[str[i]]) {
+//       // האם האות נבדקה כבר (אם לא - נכנס ללואה שתשווה ותוסיף 1 . אם כן לא נתייחס אליה  )
+//       for (let j = 0; j < str.length; j++) {
+//         if (str[i] === str[j]) {
+//           // האם האות שווה לאות הנסרקת אם כן נכנס לתנאי השני
+//           if (!letters[str[i]]) {
+//             //אם האות לא קיימת
+//             letters[str[i]] = 1; //  אם לא צור אותה ותשווה לאחד
+//           } else letters[str[i]]++; // אם קיים תוסיף אחד לערך
+//         }
+//       }
+//     }
+//   }
+//   return letters;
+// }
+// console.log(
+//   toNumberOfletter(`Create an object called book with properties: title (string), author (string), and pages (number).
+// Access and log the title and author of the book.
+// Increase the number of pages by 50 and log the updated object.
+// Hint: To increase the number of pages, you'll need to access the current value and add to it.
 
-Learn more: MDN Web Docs - Object basics
+// Learn more: MDN Web Docs - Object basics
 
-Exercise 5: Animal
-Create an object called animal with properties: species (string), sound (string), and isWild (boolean).
-Access and log the species and sound of the animal.
-Change the isWild property and log the updated object.
-Hint: Boolean values in JavaScript are true or false (without quotes).
+// Exercise 5: Animal
+// Create an object called animal with properties: species (string), sound (string), and isWild (boolean).
+// Access and log the species and sound of the animal.
+// Change the isWild property and log the updated object.
+// Hint: Boolean values in JavaScript are true or false (without quotes).
 
-Learn more: JavaScript.info - Object properties configuration
+// Learn more: JavaScript.info - Object properties configuration
 
-Exercise 6: Smartphone
-Create an object called smartphone with properties: brand (string), model (string), and storageGB (number).
-Access and log the brand and storageGB of the smartphone.
-Update the model of the smartphone and log the updated object.
-Hint: When logging multiple properties, you can use string concatenation or template literals.
+// Exercise 6: Smartphone
+// Create an object called smartphone with properties: brand (string), model (string), and storageGB (number).
+// Access and log the brand and storageGB of the smartphone.
+// Update the model of the smartphone and log the updated object.
+// Hint: When logging multiple properties, you can use string concatenation or template literals.
 
-Learn more: MDN Web Docs - Template literals`)
-);
+// Learn more: MDN Web Docs - Template literals`)
+// );
 
 // 9
 
@@ -222,3 +222,57 @@ Learn more: MDN Web Docs - Template literals`)
 // ispalindrom("natan")
 
 // 12
+
+// let numbers = [1, 2, 3, 4];
+// let numbersTwo = [3, 4, 5, 6];
+
+// let newArrayNumbers = [];
+// for (let i = 0; i < numbers.length; i++) {
+//   for (let j = 0; j < numbersTwo.length; j++) {
+//     if (numbers[i] === numbersTwo[j]) {
+//       newArrayNumbers.push(numbers[i]);
+//     }
+//   }
+// }
+// console.log(newArrayNumbers);
+
+// 13
+
+function findPrimeNums(startRange, endRange) {
+  if (startRange < endRange) {
+    // to avoide endles loop
+    let freakNumbers = [];
+    let primeNumbers = [];
+    for (let i = startRange; i <= endRange; i++) {
+      // to check all range
+      if (i > 1 || i < 1) {
+        // check if not 0 or 1
+        for (let j = 2; j < i; j++) {
+          // to avoid division to himselfe and to 1
+          if (i % j === 0) {
+            freakNumbers.push(i);
+            break;
+          }
+        }
+      }
+    }
+    for (let i = 0; i < freakNumbers.length; i++) {
+      //  try to get the numbers not in the freak array
+      //  by check if there a number missing before them and push him to prime array
+      if (freakNumbers[i] - freakNumbers[i - 1] !== 1) {
+        primeNumbers.push(freakNumbers[i] - 1);
+      }
+    }
+    for (let i = 2; i < primeNumbers[0]; i++) {
+      //the first number  in the freak array allweys
+      // be division so  need to check him by himsekf
+      if (primeNumbers[0] % i === 0) {
+        primeNumbers.shift();
+      }
+    }
+    console.log(primeNumbers);
+  }
+}
+console.log(findPrimeNums(1, 1000));
+
+//////////////////////////// 🤣🤣🤣🤣🤣🤣🤣🤣
