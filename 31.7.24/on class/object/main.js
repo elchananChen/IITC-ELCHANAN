@@ -6,22 +6,22 @@
 
 // // 1
 
-// let person = {
-//   name: "joe",
-//   age: 38,
-//   isStudent: false,
-// };
+let person = {
+  name: ["joe", 1],
+  age: 38,
+  isStudent: false,
+};
 
-// // 2
+// 2
 
-// console.log(person.age, person.name);
+console.log(person.age, person.name);
 
-// // 3
+// 3
 
-// person.isStudent = true;
-// console.log(person);
+person.isStudent = true;
+console.log(person);
 
-// 1
+// // 1
 
 // // creat an object for cars
 // car = {
@@ -86,36 +86,36 @@
 // let carkey = Object.keys(car)
 // // console.log(carkey);
 
-let car = {
-  make: "toyota",
-  model: "corola",
-  year: " 2008",
-  details: function () {
-    console.log(
-      `details of this car: ${this.make} ${this.model} ${this.year} ${this.color} ` // אפשר גם : ...log(this)
-    );
-  },
-};
+// let car = {
+//   make: "toyota",
+//   model: "corola",
+//   year: " 2008",
+//   details: function () {
+//     console.log(
+//       `details of this car: ${this.make} ${this.model} ${this.year} ${this.color} ` // אפשר גם : ...log(this)
+//     );
+//   },
+// };
 
-console.log(car.model);
+// console.log(car.model);
 
-car.year = 2345;
+// car.year = 2345;
 
-car.color = "red";
+// car.color = "red";
 
-console.log(car);
+// console.log(car);
 
-car.details();
+// car.details();
 
-let carKeys = Object.keys(car);
-console.log(carKeys);
-for (let i = 0; i < carKeys.length; i++) {
-  if (typeof car[carKeys[i]] !== "function") {
-    console.log(`${carKeys[i]}:  ${car[carKeys[i]]}`);
-  }
-}
-console.log(typeof function () {});
+// let carKeys = Object.keys(car);
+// console.log(carKeys);
+// for (let i = 0; i < carKeys.length; i++) {
+//   if (typeof car[carKeys[i]] !== "function") {
+//     console.log(`${carKeys[i]}:  ${car[carKeys[i]]}`);
+//   }
+// }
+// console.log(typeof function () {});
 
-let del = 2;
-delete del;
-console.log(del);
+// let del = 2;
+// delete del;
+// console.log(del);
