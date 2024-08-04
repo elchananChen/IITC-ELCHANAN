@@ -238,41 +238,41 @@
 
 // 13
 
-// function findPrimeNums(startRange, endRange) {
-//   if (startRange < endRange) {
-//     // to avoide endles loop
-//     let freakNumbers = [];
-//     let primeNumbers = [];
-//     for (let i = startRange; i <= endRange; i++) {
-//       // to check all range
-//       if (i > 1 || i < 1) {
-//         // check if not 0 or 1
-//         for (let j = 2; j < i; j++) {
-//           // to avoid division to himselfe and to 1
-//           if (i % j === 0) {
-//             freakNumbers.push(i);
-//             break;
-//           }
-//         }
-//       }
-//     }
-//     for (let i = 0; i < freakNumbers.length; i++) {
-//       //  try to get the numbers not in the freak array
-//       //  by check if there a number missing before them and push him to prime array
-//       if (freakNumbers[i] - freakNumbers[i - 1] !== 1) {
-//         primeNumbers.push(freakNumbers[i] - 1);
-//       }
-//     }
-//     for (let i = 2; i < primeNumbers[0]; i++) {
-//       //the first number  in the freak array allweys
-//       // be division so  need to check him by himsekf
-//       if (primeNumbers[0] % i === 0) {
-//         primeNumbers.shift();
-//       }
-//     }
-//     console.log(primeNumbers);
-//   }
-// }
-// console.log(findPrimeNums(1, 1000));
+function findPrimeNums(startRange, endRange) {
+  if (startRange < endRange) {
+    // to avoide endles loop
+    let freakNumbers = [];
+    let primeNumbers = [];
+    for (let i = startRange; i <= endRange; i++) {
+      // to check all range
+      if (i > 1 || i < 1) {
+        // check if not 0 or 1
+        for (let j = 2; j < i; j++) {
+          // to avoid division to himselfe and to 1
+          if (i % j === 0) {
+            freakNumbers.push(i);
+            break;
+          }
+        }
+      }
+    }
+    for (let i = 0; i < freakNumbers.length; i++) {
+      //  try to get the numbers not in the freak array
+      //  by check if there a number missing before them and push him to prime array
+      if (freakNumbers[i] - freakNumbers[i - 1] !== 1) {
+        primeNumbers.push(freakNumbers[i] - 1);
+      }
+    }
+    for (let i = 2; i < primeNumbers[0]; i++) {
+      //the first number  in the freak array allweys
+      // be division so  need to check him by himsekf
+      if (primeNumbers[0] % i === 0) {
+        primeNumbers.shift();
+      }
+    }
+    console.log(primeNumbers);
+  }
+}
+console.log(findPrimeNums(1, 1000));
 
 // //////////////////////////// 🤣🤣🤣🤣🤣🤣🤣🤣🥴🥴🥴🥴

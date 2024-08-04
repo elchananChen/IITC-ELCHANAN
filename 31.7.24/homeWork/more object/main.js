@@ -1,25 +1,33 @@
-// // 15
+// 15
 
-// let toDoList = {
-//   tasks: ["shoping", "homwork"],
-//   complitedTask: ["homework"],
-// };
+let toDoList = {
+  tasks: ["shoping", "homwork"],
+  complitedTask:  ["homework"],
+  moveCompliteTask : this.() {
+    
+  }
+};
 
-// toDoList.tasks.push("sleep");
+toDoList.tasks.push("sleep");
 
-// console.log(toDoList.tasks);
+toDoList.complitedTask.push("shoping");
 
-// toDoList.complitedTask.push("shoping")
+toDoList.displayTask = [];
+console.log(toDoList);
 
-// // 🤔
+
+
+// 🤔
 
 // // 11
 
 // let playList = {
-//     name: "old songs",
-//     songs: ["cineret" , "galil" ],
-//     duration: 7
-// }
+//   name: "old songs",
+//   songs: ["cineret", "galil"],
+//   duration: "",
+// };
 
-// playList.songs.push("old")
-// // 🤔🤔
+// playList.songs.push("old");
+
+// console.log(playList.songs.length);
+// playList.duration = 9
