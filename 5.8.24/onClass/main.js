@@ -46,5 +46,5 @@ let cat = {
 let cat_2 = { ...cat };
 
 cat_2.face = "🐈"; // רק הוא השתנה
-
 cat_2.food.push("milk"); // גם המקורי השתנה כיוון ש"אוכל" הוא מערך - כתובת - ושינינו את
+cat_2 = { ...cat, ...food };
