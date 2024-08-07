@@ -160,3 +160,54 @@ while (i > 0) {
 console.log(numbers);
 
 // 31
+
+console.log(colors.indexOf("yellow"));
+console.log(colors);
+
+// 32
+
+console.log(seasons.indexOf("winter"));
+
+// 33+34
+
+for (let i = 0; i < colors.length; i++) {
+  colors[i] = colors[i].toLowerCase();
+}
+colors.push("red");
+console.log(colors.lastIndexOf("red"));
+console.log(colors.indexOf("red"));
+
+// 35
+function isExists(color) {
+  return colors.indexOf(color) !== -1;
+}
+console.log(isExists("brown"));
+
+// 36
+
+console.log(fruits.includes("apple"));
+
+// 37
+
+numbers[0] = 1;
+console.log(numbers);
+console.log(numbers.includes(1));
+
+// 38
+
+colors[3] = "blue";
+console.log(colors.includes("blue", Math.floor(colors.length / 2)));
+console.log(colors);
+
+// 39
+
+function isIncludes(array, value) {
+  return array.includes(value);
+}
+console.log(isIncludes(colors, "red"));
+
+// 40
+
+if (colors.includes("red") === true) {
+  console.log(`red exist`);
+} else console.log("red not exist");
