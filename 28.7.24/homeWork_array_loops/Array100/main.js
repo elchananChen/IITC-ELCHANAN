@@ -225,7 +225,7 @@ console.log(colo);
 // 43
 
 let newSeason = seasons.slice(1, 4);
-console.log(seasons);
+// console.log(seasons);
 
 // 44
 
@@ -234,20 +234,20 @@ newSeason = seasons.slice(0);
 // 45
 seasons[4] = "banana";
 newSeason = seasons.slice(Math.floor(seasons.length / 2));
-console.log(newSeason);
+// console.log(newSeason);
 
 // 46
 
 fruits[4] = "banana";
 console.log(fruits);
 fruits.splice(Math.ceil(fruits.length / 2, fruits.length / 2 + 1));
-console.log(fruits);
+// console.log(fruits);
 
 // 47
 
-console.log(numbers);
+// console.log(numbers);
 numbers.splice(2, 1, 34, 90);
-console.log(numbers);
+// console.log(numbers);
 
 // 48
 
@@ -261,4 +261,62 @@ console.log(numbers);
 // 50
 
 // colors.splice(0);
-console.log(colors);
+// console.log(colors);
+
+// 51
+
+const fruitsColors = fruits.concat(colors);
+// console.log(fruitsColors);
+
+// 52
+
+const fruitsColorsNumbers = fruits.concat(colors, numbers);
+// console.log(fruitsColorsNumbers);
+
+// 53
+
+// const fruitsColors = fruits.concat(colors);
+// console.log(fruitsColors);
+
+// 54
+
+const doubelFruits = fruits.concat(fruits);
+// console.log(doubelFruits);
+
+// 55
+
+const moreFruits = fruits.concat("guiava", "ananas");
+// console.log(moreFruits);
+
+// // 56
+
+// stringFruits = fruits.join("");
+// // console.log(stringFruits);
+
+// // 57
+
+// stringNumbers = numbers.join("-");
+// // console.log(stringNumbers);
+
+// // 58
+
+// function joiner(array, separator) {
+//   return array.join(separator);
+// }
+
+// // console.log(joiner(fruits, " - "));
+
+// // 59
+
+stringFruits = fruits.join("");
+console.log(stringFruits);
+
+// 60
+stringFruits = fruits.join(" ");
+
+const reverserArray = stringFruits.split(" ");
+
+reverserArray.reverse();
+console.log(reverserArray);
+reversString = reverserArray.join(" ");
+console.log(reversString);
