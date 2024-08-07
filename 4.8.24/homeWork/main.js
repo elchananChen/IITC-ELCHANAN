@@ -179,44 +179,34 @@
 // // // }
 // // // let deliveredOrders = getDeliveredOrders(orders);
 // // // console.log("Delivered Orders:", deliveredOrders);
-let orders = [
-  { id: 1, product: "Laptop", status: "delivered" },
-  { id: 2, product: "Mouse", status: "pending" },
-  { id: 3, product: "Keyboard", status: "delivered" },
-  { id: 4, product: "Monitor", status: "pending" },
-  { id: 5, product: "Laptop", status: "shipped" },
-];
+// let orders = [
+//   { id: 1, product: "Laptop", status: "delivered" },
+//   { id: 2, product: "Mouse", status: "pending" },
+//   { id: 3, product: "Keyboard", status: "delivered" },
+//   { id: 4, product: "Monitor", status: "pending" },
+//   { id: 5, product: "Laptop", status: "shipped" },
+// ];
 
-// // TODO: Write a function to count the occurrences of each product in the orders
-function countProductOccurrences(orders) {
-  let count = {};
-  for (let i = 0; i < orders.length; i++) {
-    // currentOrder = orders[i].product;
-    if (count[orders[i].product] === undefined) {
-      count[orders[i]["product"]] = 1;
-    } else count[orders[i]["product"]]++;
-  }
-  return count;
-}
-let productCounts = countProductOccurrences(orders);
-console.log("Product Counts:", productCounts);
-
+// // // TODO: Write a function to count the occurrences of each product in the orders
 // function countProductOccurrences(orders) {
-//   const count = {};
+//   let count = {};
 //   for (let i = 0; i < orders.length; i++) {
-//     if (!count[orders[i].product])
-//       //If not exists yet
-//       count[orders[i].product] = 1; //create first time
-//     else count[orders[i].product]++; //Increment
+//     // currentOrder = orders[i].product;
+//     if (count[orders[i]["product"]] === undefined) {
+//       count[orders[i]["product"]] = 1;
+//     } else count[orders[i]["product"]]++;
 //   }
 //   return count;
 // }
-// // // /*
-// //   Output:
-// //   {
-// //     Laptop: 2,
-// //     Mouse: 1,
-// //     Keyboard: 1,
-// //     Monitor: 1
-// //   }
-// //   */
+// let productCounts = countProductOccurrences(orders);
+// console.log("Product Counts:", productCounts);
+
+/*
+  Output:
+  {
+    Laptop: 2,
+    Mouse: 1,
+    Keyboard: 1,
+    Monitor: 1
+  }
+  */

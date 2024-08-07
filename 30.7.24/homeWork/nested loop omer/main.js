@@ -6,16 +6,16 @@
 
 // 4
 // function howManyVowels(value) {
-//   let consonentCount = 0;
 //   let vowelsCount = 0;
 //   let vowels = "aeiouAEIOU";
 //   for (i = 0; i < value.length; i++) {
 //     for (let j = 0; j < vowels.length; j++) {
 //       if (value[i] === vowels[j]) {
 //         vowelsCount++;
-//       } else consonentCount = i + 1 - vowelsCount;
+//       } // else consonentCount = i + 1 - vowelsCount;
 //     }
 //   }
+//   // let consonentCount = value.length - vowelsCount;
 
 //   return `in this word there is ${vowelsCount} vowes and  ${consonentCount} consonent!`;
 // }
@@ -27,7 +27,7 @@
 //   let revers = "";
 //   for (let i = 0; i < value.length; i++) {
 //     revers = value[i] + revers;
-//     console.log(revers);
+//     // console.log(revers);
 //   }
 //   return revers;
 // }
@@ -238,6 +238,45 @@
 
 // 13
 
+// function findPrimeNums(startRange, endRange) {
+//   if (startRange < endRange) {
+//     // to avoide endles loop
+//     let freakNumbers = [];
+//     let primeNumbers = [];
+//     for (let i = startRange; i <= endRange; i++) {
+//       // to check all range
+//       if (i > 1 || i < 1) {
+//         // check if not 0 or 1
+//         for (let j = 2; j < i; j++) {
+//           // to avoid division to himselfe and to 1
+//           if (i % j === 0) {
+//             freakNumbers.push(i);
+//             break;
+//           }
+//         }
+//       }
+//     }
+//     for (let i = 0; i < freakNumbers.length; i++) {
+//       //  try to get the numbers not in the freak array
+//       //  by check if there a number missing before them and push him to prime array
+//       if (freakNumbers[i] - freakNumbers[i - 1] !== 1) {
+//         primeNumbers.push(freakNumbers[i] - 1);
+//       }
+//     }
+//     for (let i = 2; i < primeNumbers[0]; i++) {
+//       //the first number  in the freak array allweys
+//       // be division so  need to check him by himsekf
+//       if (primeNumbers[0] % i === 0) {
+//         primeNumbers.shift();
+//       }
+//     }
+//     console.log(primeNumbers);
+//   }
+// }
+// console.log(findPrimeNums(1, 1000));
+
+// //////////////////////////// 🤣🤣🤣🤣🤣🤣🤣🤣🥴🥴🥴🥴↕↕↕
+
 function findPrimeNums(startRange, endRange) {
   if (startRange < endRange) {
     // to avoide endles loop
@@ -250,29 +289,14 @@ function findPrimeNums(startRange, endRange) {
         for (let j = 2; j < i; j++) {
           // to avoid division to himselfe and to 1
           if (i % j === 0) {
-            freakNumbers.push(i);
             break;
-          }
+          } else if ((j = i - 1)) primeNumbers.push(i);
         }
       }
     }
-    for (let i = 0; i < freakNumbers.length; i++) {
-      //  try to get the numbers not in the freak array
-      //  by check if there a number missing before them and push him to prime array
-      if (freakNumbers[i] - freakNumbers[i - 1] !== 1) {
-        primeNumbers.push(freakNumbers[i] - 1);
-      }
-    }
-    for (let i = 2; i < primeNumbers[0]; i++) {
-      //the first number  in the freak array allweys
-      // be division so  need to check him by himsekf
-      if (primeNumbers[0] % i === 0) {
-        primeNumbers.shift();
-      }
-    }
-    console.log(primeNumbers);
+    return primeNumbers;
   }
 }
-console.log(findPrimeNums(1, 1000));
+console.log(findPrimeNums(10, 20));
 
-// //////////////////////////// 🤣🤣🤣🤣🤣🤣🤣🤣🥴🥴🥴🥴
+///////////////////////////////////////////////////

@@ -241,16 +241,7 @@ function getDeliveredOrders(orders) {
 // console.log("Delivered Orders:", deliveredOrders);
 
 // TODO: Write a function to count the occurrences of each product in the orders
-function countProductOccurrences(orders) {
-  const count = {};
-  for (let i = 0; i < orders.length; i++) {
-    if (!count[orders[i].product])
-      //If not exists yet
-      count[orders[i].product] = 1; //create first time
-    else count[orders[i].product]++; //Increment
-  }
-  return count;
-}
+fs;
 
 // let productCounts = countProductOccurrences(orders);
 // console.log("Product Counts:", productCounts);
