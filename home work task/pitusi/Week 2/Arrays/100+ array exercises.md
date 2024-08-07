@@ -185,9 +185,9 @@
     Hint: Use `splice()` with 3 or more arguments to replace elements.
 
 48. Insert three new elements between existing elements in `colors` without removing any.
-    Hint: Set the delete count to 0 when using `splice()` to insert.
 
 49. Remove the first element and add two new elements at the beginning using a single `splice()` call.
+    Hint: Set the delete count to 0 when using `splice()` to insert.
     Hint: `splice()` can remove and add elements simultaneously.
 
 50. Use `splice()` to empty an array by removing all elements.

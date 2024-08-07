@@ -211,3 +211,54 @@ console.log(isIncludes(colors, "red"));
 if (colors.includes("red") === true) {
   console.log(`red exist`);
 } else console.log("red not exist");
+
+// 41
+numbers.push(123, 532, 532, 321, 532, 777);
+const num = numbers.slice(0, 3);
+console.log(num);
+console.log(numbers);
+
+// 42
+const colo = colors.slice(-3);
+console.log(colo);
+
+// 43
+
+let newSeason = seasons.slice(1, 4);
+console.log(seasons);
+
+// 44
+
+newSeason = seasons.slice(0);
+
+// 45
+seasons[4] = "banana";
+newSeason = seasons.slice(Math.floor(seasons.length / 2));
+console.log(newSeason);
+
+// 46
+
+fruits[4] = "banana";
+console.log(fruits);
+fruits.splice(Math.ceil(fruits.length / 2, fruits.length / 2 + 1));
+console.log(fruits);
+
+// 47
+
+console.log(numbers);
+numbers.splice(2, 1, 34, 90);
+console.log(numbers);
+
+// 48
+
+// colors.splice(1, 0, "wite", "red", "blue");
+// console.log(colors);
+
+// 49
+
+// colors.splice(0, 1, "wite", "red");
+
+// 50
+
+// colors.splice(0);
+console.log(colors);
