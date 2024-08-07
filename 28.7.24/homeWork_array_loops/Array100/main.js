@@ -96,3 +96,67 @@ seasons[seasons.length - 1] = last;
 console.log(seasons);
 
 // 21
+
+fruits.push("orange");
+
+// 22
+console.log(fruits);
+
+numbers.pop();
+console.log(numbers);
+
+// 23
+
+colors.push("yellow", "gray", "black");
+console.log(colors);
+
+// 24
+
+pushNumbers = [];
+pushNumbers.push(1, 2, 3, 4, 5);
+console.log(pushNumbers);
+
+// 25
+
+const names = ["dada", "baba", "yaga", "mama"];
+const length = names.length;
+for (let i = 0; i < length; i++) {
+  const removed = names.pop();
+  console.log(removed);
+}
+console.log(names);
+
+// 26
+
+fruits.unshift("mango");
+console.log(fruits);
+
+// 27
+
+numbers.shift();
+
+// 28
+
+numbers.unshift(1, 3, 4, 5);
+console.log(numbers);
+
+// 29
+
+const numberstTwo = [];
+
+for (let i = 1; i <= 5; i++) {
+  numberstTwo.unshift(i);
+}
+console.log(numberstTwo);
+
+// 30
+
+let i = numbers.length;
+while (i > 0) {
+  const removed = numbers.shift();
+  console.log(removed);
+  i--;
+}
+console.log(numbers);
+
+// 31
