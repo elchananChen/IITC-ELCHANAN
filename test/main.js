@@ -261,31 +261,59 @@
 // The function should return an object where keys are the number of spaces
 // and values are arrays of strings.
 
-const strings = [
-  "baba",
-  "my success",
-  "no more lives",
-  "and of session",
-  "good discussion",
-];
+// const strings = [
+//   "baba",
+//   "my success",
+//   "no more lives",
+//   "and of session",
+//   "good discussion",
+// ];
 
-function groupStringsBySpaces(strings) {
-  const spaceObject = {};
-  for (let i = 0; i < strings.length; i++) {
-    let counter = 0;
-    for (let j = 0; j < strings[i].length; j++) {
-      if (strings[i][j] === " ") {
-        counter++;
-      }
-    }
-if(!spaceObject[counter]) {spaceObject[counter] = [strings[i]]};
-else spaceObject.push() 
-  }
-  return spaceObject;
-}
+// function groupStringsBySpaces(strings) {
+//   const spaceObject = {};
+//   for (let i = 0; i < strings.length; i++) {
+//     let counter = 0;
+//     for (let j = 0; j < strings[i].length; j++) {
+//       if (strings[i][j] === " ") {
+//         counter++;
+//       }
+//     }
+//     if (!spaceObject[counter]) {
+//       spaceObject[counter] = [strings[i]];
+//     } else spaceObject[counter].push(strings[i]);
+//   }
+//   return spaceObject;
+// }
 
-const groupedStrings_1 = groupStringsBySpaces(strings);
-console.log("Grouped Strings By Spaces:", groupedStrings_1);
+// whird▼▼▼⇩⇩⇩
+// const strings = [
+//   "baba",
+//   "my success",
+//   "no more lives",
+//   "and of session",
+//   "good discussion",
+// ];
+
+// function groupStringsBySpaces(strings) {
+//   const spaceObject = {};
+//   for (let i = 0; i < strings.length; i++) {
+//     let counter = 0;
+//     for (let j = 0; j < strings[i].length; j++) {
+//       if (strings[i][j] === " ") {
+//         counter++;
+//       }
+//     }
+
+//     spaceObject[counter] += ` ${strings[i]}.`;
+//     return spaceObject;
+//   }
+// }
+
+// const groupedStrings_1 = groupStringsBySpaces(strings);
+// console.log("Grouped Strings By Spaces:", groupedStrings_1);
+
+// const groupedStrings_1 = groupStringsBySpaces(strings);
+// console.log("Grouped Strings By Spaces:", groupedStrings_1);
 
 // const spaceObjec = {};
 // spaceObjec.baba = [1, 2];
