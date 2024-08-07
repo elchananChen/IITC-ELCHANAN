@@ -336,34 +336,34 @@
 // letter of each string in the array (You should return a new array)
 // // Bonus: Capitalize the first letter of each word in the string (split by space)
 
-// const strings = [
-//   "four",
-//   "baba",
-//   "my success",
-//   "no more lives",
-//   "and of session",
-//   "good discussion",
-// ];
+const strings = [
+  "four",
+  "baba",
+  "my success",
+  "no more lives",
+  "and of session",
+  "good discussion",
+];
 
-// function capitalizeStrings(strings) {
-//   const upperStrings = [];
-//   for (let i = 0; i < strings.length; i++) {
-//     let string = "";
-//     let stringTwo = "";
-//     string = strings[i];
-//     for (let j = 0; j < strings[i].length; j++) {
-//       if (j === 0) {
-//         stringTwo = string[j].toUpperCase();
-//       } else if (string[j - 1] === " ") {
-//         stringTwo += string[j].toUpperCase();
-//       } else stringTwo += string[j];
-//     }
-//     upperStrings.push(stringTwo);
-//   }
-//   return upperStrings;
-// }
-// const capitalizedStrings = capitalizeStrings(strings);
-// console.log("Capitalized Strings:", capitalizedStrings);
+function capitalizeStrings(strings) {
+  const upperStrings = [];
+  for (let i = 0; i < strings.length; i++) {
+    let string = "";
+    let stringTwo = "";
+    string = strings[i];
+    for (let j = 0; j < strings[i].length; j++) {
+      if (j === 0) {
+        stringTwo = string[j].toUpperCase();
+      } else if (string[j - 1] === " ") {
+        stringTwo += string[j + 1].toUpperCase();
+      } else stringTwo += string[j];
+    }
+    upperStrings.push(stringTwo);
+  }
+  return upperStrings;
+}
+const capitalizedStrings = capitalizeStrings(strings);
+console.log("Capitalized Strings:", capitalizedStrings);
 
 // let str = "dfs";
 // let trs = "srt";

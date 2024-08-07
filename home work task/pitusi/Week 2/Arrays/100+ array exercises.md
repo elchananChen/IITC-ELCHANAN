@@ -1,6 +1,7 @@
 # 100+ Array Exercises for JavaScript with Hints and W3Schools Links
 
 ## Basic Syntax and Declaration
+
 [W3Schools Array Declaration](https://www.w3schools.com/js/js_arrays.asp)
 
 1. Declare an empty array called `fruits`.
@@ -19,6 +20,7 @@
    Hint: Think about the names of the four seasons.
 
 ## Array Length
+
 [W3Schools Array Length](https://www.w3schools.com/js/js_array_length.asp)
 
 6. Write a statement to print the length of the `numbers` array.
@@ -37,6 +39,7 @@
     Hint: Removing an element decreases the length by 1.
 
 ## Accessing Elements
+
 [W3Schools Accessing Array Elements](https://www.w3schools.com/js/js_array_access.asp)
 
 11. Print the first element of the `colors` array.
@@ -55,6 +58,7 @@
     Hint: Use `${}` in template literals to embed expressions.
 
 ## Modifying Elements
+
 [W3Schools Changing Array Elements](https://www.w3schools.com/js/js_array_methods.asp)
 
 16. Change the first element of `fruits` to "apple".
@@ -73,6 +77,7 @@
     Hint: Use a temporary variable to hold one value during the swap.
 
 ## Array Methods: push() and pop()
+
 [W3Schools Array push()](https://www.w3schools.com/jsref/jsref_push.asp)
 [W3Schools Array pop()](https://www.w3schools.com/jsref/jsref_pop.asp)
 
@@ -92,6 +97,7 @@
     Hint: Continue the loop while the array's length is greater than 0.
 
 ## Array Methods: unshift() and shift()
+
 [W3Schools Array unshift()](https://www.w3schools.com/jsref/jsref_unshift.asp)
 [W3Schools Array shift()](https://www.w3schools.com/jsref/jsref_shift.asp)
 
@@ -111,6 +117,7 @@
     Hint: Similar to the `pop()` loop, but use `shift()` instead.
 
 ## Array Methods: indexOf() and lastIndexOf()
+
 [W3Schools Array indexOf()](https://www.w3schools.com/jsref/jsref_indexof_array.asp)
 [W3Schools Array lastIndexOf()](https://www.w3schools.com/jsref/jsref_lastindexof_array.asp)
 
@@ -130,6 +137,7 @@
     Hint: Compare the result of `indexOf()` to -1.
 
 ## Array Methods: includes()
+
 [W3Schools Array includes()](https://www.w3schools.com/jsref/jsref_includes_array.asp)
 
 36. Check if `fruits` includes "apple" and print the result.
@@ -148,6 +156,7 @@
     Hint: Use a ternary operator or if-else statement.
 
 ## Array Methods: slice()
+
 [W3Schools Array slice()](https://www.w3schools.com/jsref/jsref_slice_array.asp)
 
 41. Extract the first three elements from `numbers` using `slice()`.
@@ -166,6 +175,7 @@
     Hint: Calculate start and end indices based on array length.
 
 ## Array Methods: splice()
+
 [W3Schools Array splice()](https://www.w3schools.com/jsref/jsref_splice.asp)
 
 46. Remove two elements from the middle of `fruits` using `splice()`.
@@ -184,6 +194,7 @@
     Hint: Remove elements from index 0 to the array's length.
 
 ## Array Methods: concat()
+
 [W3Schools Array concat()](https://www.w3schools.com/jsref/jsref_concat_array.asp)
 
 51. Concatenate `fruits` and `colors` into a new array.
@@ -202,6 +213,7 @@
     Hint: Pass individual elements as separate arguments to `concat()`.
 
 ## Array Methods: join()
+
 [W3Schools Array join()](https://www.w3schools.com/jsref/jsref_join.asp)
 
 56. Convert `fruits` into a comma-separated string using `join()`.
@@ -220,6 +232,7 @@
     Hint: Split the sentence into words, reverse the array, then join.
 
 ## Array Methods: reverse()
+
 [W3Schools Array reverse()](https://www.w3schools.com/jsref/jsref_reverse.asp)
 
 61. Reverse the order of elements in `seasons`.
@@ -238,6 +251,7 @@
     Hint: Use a loop to swap elements from the start and end of the array.
 
 ## Array Methods: sort()
+
 [W3Schools Array sort()](https://www.w3schools.com/jsref/jsref_sort.asp)
 
 66. Sort the `fruits` array in alphabetical order.
@@ -256,7 +270,9 @@
     Hint: Use the modulo operator (%) in the compare function.
 
 SKIP IT:
+
 ## Array Iteration: forEach()
+
 [W3Schools Array forEach()](https://www.w3schools.com/jsref/jsref_foreach.asp)
 
 71. Use `forEach()` to print each element in `colors`.
@@ -275,7 +291,9 @@ SKIP IT:
     Hint: Increment a counter variable in the `forEach()` callback when the condition is met.
 
 SKIP IT:
+
 ## Array Iteration: map()
+
 [W3Schools Array map()](https://www.w3schools.com/jsref/jsref_map.asp)
 
 76. Use `map()` to create a new array with the lengths of each string in `fruits`.
@@ -291,9 +309,10 @@ SKIP IT:
     Hint: Return a greeting string that includes the name in the `map()` callback.
 
 80. Implement a function that uses `map()` to convert an array of Celsius temperatures to Fahrenheit.
-    Hint: Use the formula (C * 9/5) + 32 in the `map()` callback.
+    Hint: Use the formula (C \* 9/5) + 32 in the `map()` callback.
 
 ## Array Iteration: filter()
+
 [W3Schools Array filter()](https://www.w3schools.com/jsref/jsref_filter.asp)
 
 81. Use `filter()` to create a new array with only the even numbers from `numbers`.
@@ -312,9 +331,9 @@ SKIP IT:
     Hint: Use the `includes()` method on each element in the `filter()` callback.
 
 ## Array Iteration: find() and findIndex()
+
 [W3Schools Array find()](https://www.w3schools.com/jsref/jsref_find.asp)
 [W3Schools Array findIndex()](https://www.w3schools.com/jsref/jsref_findindex.asp)
-
 
 86. Use `find()` to get the first element in `numbers` that's greater than 3.
     Hint: Return true in the callback when the condition is met.
@@ -332,6 +351,7 @@ SKIP IT:
     Hint: Pass the custom condition as a callback function to `find()`.
 
 ## Array Iteration: some() and every()
+
 [W3Schools Array some()](https://www.w3schools.com/jsref/jsref_some.asp)
 [W3Schools Array every()](https://www.w3schools.com/jsref/jsref_every.asp)
 
@@ -351,7 +371,9 @@ SKIP IT:
     Hint: Combine `some()` and `every()` checks using logical operators.
 
 SKIP IT:
+
 ## Array Iteration: reduce()
+
 [W3Schools Array reduce()](https://www.w3schools.com/jsref/jsref_reduce.asp)
 
 96. Sum all numbers in `numbers` using `reduce()`.
@@ -366,10 +388,11 @@ SKIP IT:
 99. Implement a `flatten()` function for nested arrays using `reduce()`.
     Hint: Use `concat()` within the `reduce()` callback to merge nested arrays.
 
-100. Use `reduce()` to group an array of objects by a specific property.
-     Hint: The accumulator should be an object with keys based on the grouping property.
+100.  Use `reduce()` to group an array of objects by a specific property.
+      Hint: The accumulator should be an object with keys based on the grouping property.
 
 ## Advanced Exercises - for PROS
+
 101. Implement a function that removes duplicate elements from an array without using Set.
      Hint: Use `reduce()` or `filter()` with `indexOf()`.
 
