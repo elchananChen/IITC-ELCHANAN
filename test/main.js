@@ -285,30 +285,6 @@
 //   return spaceObject;
 // }
 
-// whird▼▼▼⇩⇩⇩
-// const strings = [
-//   "baba",
-//   "my success",
-//   "no more lives",
-//   "and of session",
-//   "good discussion",
-// ];
-
-// function groupStringsBySpaces(strings) {
-//   const spaceObject = {};
-//   for (let i = 0; i < strings.length; i++) {
-//     let counter = 0;
-//     for (let j = 0; j < strings[i].length; j++) {
-//       if (strings[i][j] === " ") {
-//         counter++;
-//       }
-//     }
-
-//     spaceObject[counter] += ` ${strings[i]}.`;
-//     return spaceObject;
-//   }
-// }
-
 // const groupedStrings_1 = groupStringsBySpaces(strings);
 // console.log("Grouped Strings By Spaces:", groupedStrings_1);
 
@@ -319,65 +295,57 @@
 // spaceObjec.baba = [1, 2];
 // console.log(spaceObjec);
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 /////////////////////////////////////////////////////////////////
 
 // // 🥵 Task 14: group strings by length 🥵
 // //TODO: Write a function to group strings by length.
-// // The function should return an object where keys are the length of the strings and values are arrays of strings.
+
+// The function should return an object where keys are the
+// length of the strings and values are arrays of strings.
+
+// const strings = [
+//   "four",
+//   "baba",
+//   "my success",
+//   "no more lives",
+//   "and of session",
+//   "good discussion",
+// ];
 
 // function groupStringsByLength(strings) {
-//   // your code here
+//   const objectsLength = {};
+//   for (let i = 0; i < strings.length; i++) {
+//     let counter = 0;
+//     for (let j = 0; j < strings[i].length; j++) {
+//       counter++;
+//     }
+//     if (!objectsLength[counter]) {
+//       objectsLength[counter] = [strings[i]];
+//     } else objectsLength[counter].push(strings[i]);
+//   }
+//   return objectsLength;
 // }
 
 // const groupedStrings_2 = groupStringsByLength(strings);
-// // console.log("Grouped Strings By Length:", groupedStrings);
+// console.log("Grouped Strings By Length:", groupedStrings_2);
 
 /////////////////////////////////////////////////////////////////
 
 // // 🥵 Task 15: Capitalize Strings 🥵
-// // TODO: Write a function to capitalize the first letter of each string in the array (You should return a new array)
+// // TODO: Write a function to capitalize the first
+// letter of each string in the array (You should return a new array)
 // // Bonus: Capitalize the first letter of each word in the string (split by space)
-// function capitalizeStrings(strings) {
-//   // your code here
-// }
 
-// const capitalizedStrings = capitalizeStrings(strings);
-// // console.log("Capitalized Strings:", capitalizedStrings);
+const strings = [
+  "four",
+  "baba",
+  "my success",
+  "no more lives",
+  "and of session",
+  "good discussion",
+];
+
+function capitalizeStrings(strings) {}
+
+const capitalizedStrings = capitalizeStrings(strings);
+console.log("Capitalized Strings:", capitalizedStrings);
