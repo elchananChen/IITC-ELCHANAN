@@ -320,3 +320,132 @@ reverserArray.reverse();
 console.log(reverserArray);
 reversString = reverserArray.join(" ");
 console.log(reversString);
+
+// 61
+
+seasons.reverse();
+console.log(seasons);
+
+// 62
+
+function isPalindrom(string) {
+  const toRevers = string.split("");
+  toRevers.reverse();
+  reversString = toRevers.join("");
+  console.log(reversString);
+
+  if (reversString === string) {
+    return `${string} is palindrom!!`;
+  } else return `${string} is not a palindrom😝`;
+}
+const string = isPalindrom("natan");
+// console.log(string);
+
+// 63
+
+// numbers.reverse();
+// const squar = numbers.map((x) => x * 2);
+// // console.log(squar);
+
+// // 64
+
+// let some = "something";
+// const someArray = some.split("");
+// someArray.reverse();
+// const reversString = someArray.join("");
+// console.log(reversString);
+
+// // 65
+
+// const arrayToRevers = ["r", "e", "v", "e"];
+// const reverseArray = [];
+// for (let i = 0; i < arrayToRevers.length; i++) {
+//   reverseArray.unshift(arrayToRevers[i]);
+// }
+// console.log(reverseArray);
+
+// 66
+
+fruits.sort();
+// console.log(fruits);
+
+// 67
+
+numbers.sort((a, b) => a - b);
+
+// 68
+
+numbers.sort((a, b) => b - a);
+// console.log(numbers);
+
+// 69
+
+const wordArray = ["word", "hello", "you"];
+wordArray.sort((a, b) => b.length - a.length);
+// console.log(wordArray);
+
+// 70
+
+const numByThree = [34, 3, 2, 5, 1];
+numByThree.sort((a, b) => (a % 3) - (b % 3));
+// console.log(numByThree);
+
+// 71
+
+// colors.forEach((color) => console.log(color));
+
+// 72
+
+numbers.forEach((num, i, array) => {
+  array[i] = num * 2;
+});
+// console.log(numbers);
+
+// 73 🤔
+
+// 74
+
+numbers.forEach((num, i) => {
+  if (num === 180) {
+    console.log(i);
+  }
+});
+// console.log(numbers);
+
+// 75
+
+let counter = 0;
+numbers.forEach((num, i) => {
+  if (num > 180) {
+    counter++;
+  }
+});
+// console.log(counter);
+
+// 76
+
+const fruitsLength = fruits.map((fruit) => fruit.length);
+// console.log(fruitsLength);
+// console.log(fruits);
+
+// 77
+
+const squereNumbers = numbers.map((number) => number * number);
+// console.log(squereNumbers);
+
+// 78
+
+const isEven = numbers.map((num) => num % 2 === 0);
+// console.log(isEven);
+
+// 79
+
+names.push("baba", "yosi", "david");
+const greetingNames = names.map((name) => `${name} wellcome!! `);
+console.log(greetingNames);
+
+// 80
+
+const temperaturs = [33, 25, 0, 13];
+const temperatursFahrenheit = temperaturs.map((num) => (num * 9) / 5 + 32);
+console.log(temperatursFahrenheit);

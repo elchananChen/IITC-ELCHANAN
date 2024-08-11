@@ -252,7 +252,8 @@
 
 ## Array Methods: sort()
 
-[W3Schools Array sort()](https://www.w3schools.com/jsref/jsref_sort.asp)
+[W3Schools Array sort()](https://www.w3schools.com/jsre
+f/jsref_sort.asp)
 
 66. Sort the `fruits` array in alphabetical order.
     Hint: Default `sort()` works alphabetically for strings.
