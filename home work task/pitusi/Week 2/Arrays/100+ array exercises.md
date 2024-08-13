@@ -327,7 +327,6 @@ SKIP IT:
 
 84. Use `filter()` to remove all falsy values from an array.
     Hint: The callback can simply return the element itself, as falsy values will be filtered out.
-
 85. Implement a search function using `filter()` that returns all elements containing a specific substring.
     Hint: Use the `includes()` method on each element in the `filter()` callback.
 

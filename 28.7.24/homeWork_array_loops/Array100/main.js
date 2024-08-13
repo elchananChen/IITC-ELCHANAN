@@ -448,4 +448,97 @@ console.log(greetingNames);
 
 const temperaturs = [33, 25, 0, 13];
 const temperatursFahrenheit = temperaturs.map((num) => (num * 9) / 5 + 32);
-console.log(temperatursFahrenheit);
+// console.log(temperatursFahrenheit);
+
+// 81
+numbers.unshift(3);
+const evenNumbers = numbers.filter((num) => num % 2 === 0);
+// console.log(evenNumbers);
+
+// 82
+
+const longFruits = fruits.filter((fruit) => fruit.length >= 5);
+// console.log(longFruits);
+
+// 83 🤔
+//----- answer for the question ---
+console.log(numbers);
+function uniqueValues(arr) {
+  const uniqeValues = arr.filter((value, index, self) => {
+    return self.indexOf(value) === self.lastIndexOf(value);
+  });
+  return uniqeValues;
+}
+// console.log(uniqueValues(numbers));
+
+////------- answer for the way i understood the question -----------------
+
+function uniqueValues(arr) {
+  const uniqeValues = arr.filter((value, index, self) => {
+    return self.indexOf(value) === self.lastIndexOf(value);
+  });
+  arr.forEach((value, i, self) => {
+    if (uniqeValues.includes(self[i]) === false) {
+      uniqeValues.push(self[i]);
+    }
+  });
+  return uniqeValues;
+}
+// console.log(uniqueValues(numbers));
+
+// 84
+
+const falsyAndTruthy = ["", 0, true, false, 93];
+
+const onlyTruthy = falsyAndTruthy.filter((value) => value);
+// console.log(onlyTrusy);
+
+// 85
+
+// function includSubsting(arr, substring) {
+//   const includSubsting = arr.filter((value, i) => {
+//     if (value.toString().includes(substring) === true) {
+//       return true;
+//     }
+//   });
+//   return includSubsting;
+// }
+
+// console.log(includSubsting(colors, 3));
+
+// 86
+
+const firstGreterThenThree = numbers.find((check) => check > 3);
+console.log(firstGreterThenThree);
+
+// 87
+
+function findFirstStartWhith(arr, starter) {
+  const result = arr.find((check) => {
+    return check.toString().startsWith(starter);
+  });
+
+  return result;
+}
+
+// console.log(findFirstStartWhith(numbers, 1));
+// console.log(numbers);
+
+// 88
+
+numbers.shift(0);
+numbers.push(7);
+function findFirstPrimeNumber(arr) {
+  const primeNumber = arr.find((currentNum) => {
+    for (let i = 2; i < currentNum; i++) {
+      if (currentNum % i === 0) {
+        return false;
+      } else if (i === currentNum - 1) {
+        return true;
+      }
+    }
+  });
+  return primeNumber;
+}
+console.log(findFirstPrimeNumber(numbers));
+console.log(numbers);

@@ -280,7 +280,6 @@
 function findPrimeNums(startRange, endRange) {
   if (startRange < endRange) {
     // to avoide endles loop
-    let freakNumbers = [];
     let primeNumbers = [];
     for (let i = startRange; i <= endRange; i++) {
       // to check all range
