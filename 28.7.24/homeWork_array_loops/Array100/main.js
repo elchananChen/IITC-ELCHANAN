@@ -615,16 +615,19 @@
 // // }, {});
 // // console.log(occurrencesInArray);
 
-// // 99 🤔
+// // 99
 
 const nestedArray = [
   [1, 9],
   [3, 5],
 ];
 function flateNstedArray(arr) {
-  arr.reduce((acuurency, current, i, arr) => {
-    // acuurency = current.concat(arr[i]);
-    //return acuurency;
+  const flatArr = arr.reduce((acuurency, current, i, arr) => {
+    return acuurency.concat(arr[i]);
   }, []);
+  return flatArr;
 }
 console.log(flateNstedArray(nestedArray));
+// 😃😃😃😃😃😃
+
+// 100
