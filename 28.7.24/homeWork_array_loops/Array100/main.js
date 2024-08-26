@@ -621,13 +621,13 @@ const nestedArray = [
   [1, 9],
   [3, 5],
 ];
-function flateNstedArray(arr) {
-  const flatArr = arr.reduce((acuurency, current, i, arr) => {
-    return acuurency.concat(arr[i]);
-  }, []);
-  return flatArr;
-}
-console.log(flateNstedArray(nestedArray));
+// function flateNstedArray(arr) {
+//   const flatArr = arr.reduce((acuurency, current, i, arr) => {
+//     return acuurency.concat(arr[i]);
+//   }, []);
+//   return flatArr;
+// }
+// console.log(flateNstedArray(nestedArray));
 
 // // 😃😃😃😃😃😃
 
@@ -636,15 +636,29 @@ console.log(flateNstedArray(nestedArray));
 const objectsArray = [
   { name: "banan", age: 22 },
   { name: "ganan", age: 33 },
+  { name: "banan", age: 33 },
 ];
 
-function groupObjectsArrayByProrerty(arr, property) {
+function groupProrertyFromObjectsArray(arr, property) {
   const returnArry = arr.reduce((total, current) => {
     return total.concat(current[property]);
   }, []);
   return returnArry;
 }
 
-console.log(groupObjectsArrayByProrerty(objectsArray, "age"));
+console.log(groupProrertyFromObjectsArray(objectsArray, "age"));
 
 // console.log(objectsArray[0].age);
+
+function groupObjectsArrayByProrerty(arr, property) {
+  const returnArry = arr.reduce((total, current) => {
+    if (!total[current[property]]) {
+      total[current[property]] = [];
+    }
+    total[current[property]].push(current);
+    return total;
+  }, {});
+  return returnArry;
+}
+
+console.log(groupObjectsArrayByProrerty(objectsArray, "name"));
