@@ -646,9 +646,7 @@ function groupProrertyFromObjectsArray(arr, property) {
   return returnArry;
 }
 
-console.log(groupProrertyFromObjectsArray(objectsArray, "age"));
-
-// console.log(objectsArray[0].age);
+// console.log(groupProrertyFromObjectsArray(objectsArray, "age"));
 
 function groupObjectsArrayByProrerty(arr, property) {
   const returnArry = arr.reduce((total, current) => {
