@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+      }
+      /* .floating-botton {
+        background-color: #00ccdd;
+        padding: 40;
+        position: fixed;
+        color: rgb(181, 242, 68);
+        right: 20px;
+        bottom: 400px;
+        border: 0px;
+        font-size: 40px;
+        z-index: 99999;
+      }
+      /* .visible:hover {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.2s;
+      } */
+      /* .floating-botton:hover .hidden {
+        display: block;
+      }
+      .hidden button {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        bottom: 100%;
+        left: -50%;
+        padding-bottom: 30px;
+        background-color: transparent;
+        margin-top: 2px;
+        padding: 50%;
+        z-index: 99999;
+      }
+      .hidden button {
+        background: #00ccdd;
+        color: rgb(15, 8, 84);
+        border: none;
+        margin-block: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+      } */
+      .floating-botton {
+        position: fixed;
+        right: 40px;
+        bottom: 0px;
+      }
+
+      .floating-botton .hidden {
+        display: none;
+        position: absolute;
+        bottom: 100%;
+        left: -50%;
+        padding-bottom: 30px;
+        background: transparent;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 50%;
+      }
+
+      .floating-botton:hover .hidden {
+        display: block;
+      }
+
+      .hover {
+        border-radius: 5px;
+        cursor: pointer;
+        color: #00ccdd;
+        transition: 0.2s;
+        position: relative;
+      }
+
+      .hidden button {
+        background: #00ccdd;
+        color: rgb(15, 8, 84);
+        border: none;
+        margin-block: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Welcome 🥂</header>
+
+    <div class="floating-botton">
+      <button class="hover">⚙</button>
+      <div class="hidden">
+        <button>🤷‍♂️</button>
+        <button>🎁</button>
+      </div>
+    </div>
+  </body>
+</html>

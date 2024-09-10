@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        box-shadow: -3px 3px black inset;
+      }
+      body {
+        margin: 0px;
+      }
+      .beeg-block {
+        background-color: yellow;
+        margin: 20px;
+        padding: 10px;
+        border-style: solid;
+        border-width: 3px;
+        border-color: blue;
+      }
+
+      p {
+        padding-inline: 6px;
+        color: red;
+      }
+      span {
+        color: black;
+        font-size: 20px;
+      }
+      .high-padding-block {
+        padding: 20px;
+      }
+      .highlight {
+        padding: 20px;
+        background-color: gray;
+        color: white;
+        border-radius: 6px;
+      }
+      .blue-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        display: inline-block;
+        background-color: blue;
+      }
+      .red-circle {
+        margin-right: 4px;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        display: inline-block;
+        background-color: red;
+      }
+      .green-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        display: inline-block;
+        background-color: green;
+      }
+
+      .red-box {
+        background-color: red;
+        margin-inline: 50px;
+      }
+      .boxes-in-red-box-down-colum {
+        display: block;
+      }
+      .boxes-in-red-box {
+        display: inline-block;
+        color: white;
+        background-color: black;
+        padding-inline: 8px;
+        padding-block: 10px;
+      }
+      /* אם אני שם רק float הוא נכנס לשורה של middel↓↓↓↓ */
+      .right {
+        margin-left: 95%;
+        float: right;
+      }
+      .middel {
+        display: inline-block;
+        margin-left: 47%;
+        border: 0px solid;
+        border-radius: 50%;
+        box-shadow: 10px 0px 10px 3px rgb(205, 208, 215), -8px 10px 5px 3px blue,
+          -10px -10px 6px 3px green;
+      }
+      .empty {
+        height: 80px;
+      }
+      .buttons-position {
+        margin-bottom: 30px;
+        margin-left: 20px;
+      }
+      .buttons {
+        padding-inline: 20px;
+        padding-block: 10px;
+        background-color: rgb(147, 66, 222);
+        color: white;
+        border: 0px solid;
+        letter-spacing: 3px;
+        font-size: 20px;
+        font-style: italic;
+        border-radius: 5px;
+        text-transform: uppercase;
+      }
+      .font-button {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+      }
+      .radius-button {
+        border-radius: 24px;
+      }
+      .buttons:hover {
+        background-color: rgb(159, 87, 222);
+        border-radius: 30%;
+        box-shadow: 10px 2px 10px 3px rgb(21, 82, 225) inset;
+        transition: 200ms;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="high-padding-block beeg-block">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+      <p>Lorem, <span>Lorem</span> dolor.</p>
+      <p class="highlight">Lorem, ipsum dolor.</p>
+    </div>
+
+    <div class="sircles beeg-block">
+      <div class="red-circle"></div>
+      <div class="blue-circle"></div>
+      <div class="green-circle"></div>
+    </div>
+    <div class="beeg-block">
+      <div class="red-box">
+        <div class=".boxes-in-red-box-down-colum">
+          <div class="boxes-in-red-box">left</div>
+        </div>
+        <div class=".boxes-in-red-box-down-colum">
+          <div class="right boxes-in-red-box">right</div>
+        </div>
+        <div class=".boxes-in-red-box-down-colum">
+          <div class="middel boxes-in-red-box">middel</div>
+        </div>
+        <div class="empty"></div>
+      </div>
+    </div>
+    <div class="buttons-position">
+      <button class="buttons font-button">
+        <b>explore</b>
+      </button>
+      <button class="buttons radius-button">
+        <b>join</b>
+      </button>
+    </div>
+  </body>
+</html>

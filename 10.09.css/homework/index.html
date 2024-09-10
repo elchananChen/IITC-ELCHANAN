@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        font-size: 30px;
+      }
+      header {
+        position: sticky;
+        color: #4f75ff;
+        background-color: #c7e5f1f5;
+        z-index: 100;
+        top: 0px;
+        padding: 10px;
+      }
+      p {
+        color: rgb(15, 8, 84);
+      }
+      .inline-block {
+        display: inline-block;
+      }
+      .aside-main {
+        background-color: #00ccdd;
+        position: relative;
+      }
+      .main {
+        position: relative;
+        max-width: 65%;
+        left: 20px;
+        top: 7px;
+        font-size: 40px;
+        margin-bottom: 200px;
+      }
+      .aside p {
+        color: #00ccdd;
+        background-color: #4f75ff;
+        max-width: 30%;
+        position: absolute;
+        right: 0px;
+        top: 40px;
+        padding-block: 10px;
+        border-radius: 10px;
+      }
+      .span {
+        text-transform: uppercase;
+      }
+      .footer {
+        display: block;
+        background-color: #c7e5f1d4;
+        position: fixed;
+        z-index: 100;
+        bottom: 0px;
+        padding: 10px;
+        left: 0px;
+        right: 100px;
+      }
+      .floating-botton {
+        position: fixed;
+        right: 20px;
+        bottom: 0px;
+        z-index: 9999;
+      }
+      .btn {
+        font-size: 30px;
+        background-color: transparent;
+        border: 0px;
+        cursor: pointer;
+        margin-block: 5px;
+      }
+      .visible-btn {
+        font-size: 50px;
+        color: rgb(181, 242, 68);
+      }
+
+      .floating-botton .hidden {
+        display: none;
+        position: absolute;
+        bottom: 20px;
+        right: -2px;
+        padding-bottom: 40px;
+        background: transparent;
+      }
+
+      .floating-botton:hover .hidden {
+        display: block;
+      }
+      .floating-botton:hover .visible-btn {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>wellcome 🥂</header>
+
+    <div class="floating-botton">
+      <button class="floating-botton visible-btn btn">⚙</button>
+      <div class="hidden">
+        <button class="btn">🤷‍♂️</button>
+        <button class="btn">👍</button>
+        <button class="btn">🐈</button>
+        <button class="btn">🎁</button>
+      </div>
+    </div>
+
+    <div class="aside-main">
+      <main class="main inline-block">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+          animi, dignissimos reprehenderit non rem voluptatum libero, veritatis
+          officia
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+          animi, dignissimos reprehenderit non rem voluptatum libero, veritatis
+          officia ea doloremque sequi! Officia in pariatur quisquam deleniti
+          rerum,
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+          animi, dignissimos reprehenderit non rem voluptatum libero, veritatis
+          officia ea doloremque sequi! Officia in pariatur quisquam
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+          animi, dignissimos reprehenderit non rem voluptatum libero, veritatis
+          officia
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+          animi,
+        </p>
+      </main>
+      <aside class="aside inline-block">
+        <p>
+          <span class="span"> join as </span>Lorem ipsum dolor sit amet
+          consectetur,
+        </p>
+      </aside>
+    </div>
+    <footer class="footer">
+      <p>boring information</p>
+    </footer>
+  </body>
+</html>
