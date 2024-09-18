@@ -5,6 +5,11 @@ const gToDoList = [
     status: false,
     task: "test",
   },
+  {
+    id: makeId(),
+    status: false,
+    task: "test2",
+  },
 ];
 
 function makeId() {
@@ -29,30 +34,37 @@ function loadTheListInSpecificKey(arr, list, key, keyId) {
     wrapper.setAttribute("class", "wrapper");
 
     const li = document.createElement("li");
-    li.setAttribute("id", `a${arr[arr.length - 1][keyId]}`);
-    li.innerHTML = arr[arr.length - 1][key];
+    li.setAttribute("id", `a${arr[i][keyId]}`);
+    li.innerHTML = arr[i][key];
     wrapper.appendChild(li);
+
+    const button = addDeleteButtonToLi();
+    wrapper.appendChild(button);
 
     list.appendChild(wrapper);
     console.log(wrapper);
     console.log(list);
-
-    addDeleteButtonToLi();
-    wrapper.appendChild(button);
   }
 }
 
 function addDeleteButtonToLi() {
   const button = document.createElement("button");
   button.setAttribute("class", "deleteItemBtn");
-  button.setAttribute("class", `e${makeId()}`);
+  button.setAttribute("class", "toDelete");
   button.innerHTML = "delete";
   elToDoList.appendChild(button);
-  button.addEventListener("click", function () {
-    // elToDoList.removeChild()
-  });
+
+  return button;
 }
 
+// function deleteOnClick(arr) {
+//   const button = addDeleteButtonToLi();
+//   button.addEventListener("click", function (ev) {
+//     ev.preventDefault();
+//     arr.removeChild(wrapper ev.target);
+//   });
+// }
+// deleteOnClick(gToDoList);
 loadTheListInSpecificKey(gToDoList, elToDoList, "task", "id");
 
 function getTaskKeyFromArrObjects(arr) {
@@ -74,8 +86,8 @@ function updateDataBase(arr) {
 function addInputToListAndUpdateDataBaseOnClick(arr, list) {
   eladdBtn.addEventListener("click", function (ev) {
     updateDataBase(arr);
-    ev.preventDefault(); //order is critical
-    list.appendChild(getTaskKeyFromArrObjects(gToDoList));
+    ev.preventDefault();
+    list.appendChild(getTaskKeyFromArrObjects(gToDoList)); //order is critical
     elInputAdd.value = "";
     addDeleteButtonToLi();
     // console.log(gToDoList);
