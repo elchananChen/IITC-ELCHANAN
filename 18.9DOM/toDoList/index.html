@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>To Do list</h1>
+    <form>
+      <div class="add-wrapper">
+        <label for="task">task description:</label>
+        <input
+          id="task"
+          class="input-add"
+          type="text"
+          placeholder="your task"
+        />
+        <button class="add-btn">add task</button>
+      </div>
+      <div class="update-Wrapper">
+        <label for="task">task description:</label>
+        <input
+          id="task"
+          class="input-update"
+          type="text"
+          placeholder="updated task"
+        />
+        <button class="apdate-btn">update selected task</button>
+      </div>
+    </form>
+    <ul class="to-do-list"></ul>
+    <script src="script.js"></script>
+  </body>
+</html>
