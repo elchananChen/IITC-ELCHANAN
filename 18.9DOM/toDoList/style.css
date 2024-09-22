@@ -1,9 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  height: 100%;
+}
+
+article {
+  height: 100%;
+  padding: 2rem;
+  background-color: antiquewhite;
+}
 .update-Wrapper,
 .add-wrapper {
-  margin: 2rem;
+  margin-block: 1rem;
 }
+
 .wrapper {
   display: flex;
   gap: 2rem;
   margin-bottom: 1rem;
+}
+.complete {
+  color: hsl(0, 0%, 0%, 50%);
+}
+
+.deleteBtn {
+  background-color: antiquewhite;
+  color: rgba(255, 45, 45, 0.956);
+  border: 0px;
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+.deleteBtn:hover {
+  background-color: rgba(255, 45, 45, 0.956);
+  color: white;
+
+  transform: scale(1.3);
+}
+.completeBtn {
+  background-color: antiquewhite;
+  border: 0px;
+  color: rgb(12, 171, 4);
+  transition: transform 0.2s ease;
+}
+.completeBtn:hover {
+  transform: scale(1.9) rotate(-360deg);
+}
+.completeBtnClicked {
+  color: hsl(0, 0%, 0%, 50%);
+}
+
+.displayNone {
+  display: none;
+}
+.completeClicked,
+.unCompleteClicked {
+  background-color: antiquewhite;
+}
+.displayBtn {
+  background-color: rgb(251, 225, 191);
+  border: 0px;
+  border-radius: 2px;
+}
+.clickedBtn {
+  background-color: rgb(113, 244, 104);
 }

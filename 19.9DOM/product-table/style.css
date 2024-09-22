@@ -1,0 +1,38 @@
+@import url("./variables.css");
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+html,
+body {
+  height: 100%;
+}
+article {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color--300);
+  /* align-items: center; */
+}
+
+.wrapper {
+  margin-top: 3rem;
+  background-color: var(--color--400);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+th,
+td {
+  padding-inline: 1rem;
+  margin-block: 1rem;
+  color: var(--color--200);
+}
+h1 {
+  color: var(--color--500);
+}

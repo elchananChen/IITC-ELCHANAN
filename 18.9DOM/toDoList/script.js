@@ -1,7 +1,7 @@
 "use strict";
 const gToDoList = [
   {
-    id: makeId(),
+    id: "jVcoPQC",
     status: false,
     task: "test",
   },
@@ -22,57 +22,112 @@ function makeId() {
   return id;
 }
 
-const elToDoList = document.querySelector(".to-do-list");
-const elInputAdd = document.querySelector(".input-add");
-const elInputUpdate = document.querySelector(".input-update");
-const elapdateBtn = document.querySelector(".apdate-btn");
-const eladdBtn = document.querySelector(".add-btn");
+const elToDoList = document.querySelector(".to-do-list"); //ul
+const elInputAdd = document.querySelector(".input-add"); //add input
+const eladdBtn = document.querySelector(".add-btn"); //add button
+const elInputUpdate = document.querySelector(".input-update"); // update input
+const elapdateBtn = document.querySelector(".apdate-btn"); // update button
+const elOnlyCompletedBtn = document.querySelector(".onlyCompleteBtn");
+const elOnlyUncompletedBtn = document.querySelector(".onlyUncompleteBtn");
 
-function loadTheListInSpecificKey(arr, list, key, keyId) {
+function addClassToElementsByClassOnClick(elBtn, exisClass, toAddClass) {
+  elBtn.addEventListener("click", function (ev) {
+    ev.preventDefault();
+    elBtn.classList.toggle("clickedBtn"); // לשנות את המיקום?
+    const current = document.querySelectorAll(`.${exisClass}`);
+
+    current.forEach((element) => {
+      element.classList.toggle(toAddClass);
+    });
+  });
+}
+
+function complete(btn) {
+  btn.addEventListener("click", function (ev) {
+    ev.preventDefault();
+    btn.classList.toggle("clickedBtn");
+    const elLiAll = document.querySelectorAll("li");
+    const elLiAllArr = Array.from(elLiAll);
+    elLiAllArr.forEach((el) => {
+      if (!el.classList.contains("complete")) {
+        el.classList.toggle("displayNone");
+      }
+    });
+  });
+}
+complete(elOnlyCompletedBtn);
+
+function loadListInSpecificKey(arr, ul, key, keyId) {
   for (let i = 0; i < arr.length; i++) {
-    const wrapper = document.createElement("div");
-    wrapper.setAttribute("class", "wrapper");
-
     const li = document.createElement("li");
     li.setAttribute("id", `a${arr[i][keyId]}`);
     li.innerHTML = arr[i][key];
-    wrapper.appendChild(li);
+    li.setAttribute("class", "wrapper");
 
-    const button = addDeleteButtonToLi();
-    wrapper.appendChild(button);
+    createCompleteBtn(li);
 
-    list.appendChild(wrapper);
-    console.log(wrapper);
-    console.log(list);
+    createDeleteBtnForElement(li);
+    // li.appendChild(deleteBtn);
+    ul.appendChild(li);
   }
 }
 
-function addDeleteButtonToLi() {
-  const button = document.createElement("button");
-  button.setAttribute("class", "deleteItemBtn");
-  button.setAttribute("class", "toDelete");
-  button.innerHTML = "delete";
-  elToDoList.appendChild(button);
+function deleteFromDatabaseByID(arr, elId) {
+  for (let i = 0; i < arr.length; i++) {
+    if (elId === `a${arr[i].id}`) {
+      arr.splice(i, i + 1);
+    }
+  }
+}
 
+function createDeleteBtnForElement(toDelete) {
+  const button = document.createElement("button");
+  button.setAttribute("class", "deleteBtn");
+
+  button.textContent = "delete";
+  toDelete.appendChild(button);
+
+  button.addEventListener("click", function (ev) {
+    ev.preventDefault();
+    deleteFromDatabaseByID(gToDoList, toDelete.id);
+    toDelete.remove();
+    2;
+    // console.log(gToDoList);
+  });
   return button;
 }
 
-// function deleteOnClick(arr) {
-//   const button = addDeleteButtonToLi();
-//   button.addEventListener("click", function (ev) {
-//     ev.preventDefault();
-//     arr.removeChild(wrapper ev.target);
-//   });
-// }
-// deleteOnClick(gToDoList);
-loadTheListInSpecificKey(gToDoList, elToDoList, "task", "id");
+function createCompleteBtn(perent) {
+  const btn = document.createElement("button");
+  // btn.setAttribute("class", "complete");
+  btn.setAttribute("class", "completeBtn completeBtnClicked");
 
-function getTaskKeyFromArrObjects(arr) {
+  btn.textContent = "✔";
+
+  perent.appendChild(btn);
+  btn.addEventListener("click", function () {
+    perent.classList.toggle("complete");
+    // perent.classList.toggle("displayComplete");
+    btn.classList.toggle("completeBtnClicked");
+  });
+
+  return btn;
+}
+
+loadListInSpecificKey(gToDoList, elToDoList, "task", "id");
+
+function getKeyFromLastObjectfromArrObjectsAsLi(arr, key) {
   const li = document.createElement("li");
 
-  li.innerHTML = arr[arr.length - 1].task;
+  li.innerHTML = arr[arr.length - 1][key];
 
   return li;
+}
+
+function getKeyFromLastObjectfromArrObjectsAsString(arr, key) {
+  const keyValue = arr[arr.length - 1][key];
+
+  return keyValue;
 }
 
 function updateDataBase(arr) {
@@ -85,13 +140,24 @@ function updateDataBase(arr) {
 
 function addInputToListAndUpdateDataBaseOnClick(arr, list) {
   eladdBtn.addEventListener("click", function (ev) {
-    updateDataBase(arr);
     ev.preventDefault();
-    list.appendChild(getTaskKeyFromArrObjects(gToDoList)); //order is critical
+
+    updateDataBase(arr);
+    const li = getKeyFromLastObjectfromArrObjectsAsLi(gToDoList, "task");
+    const id = getKeyFromLastObjectfromArrObjectsAsString(gToDoList, "id");
+    li.setAttribute("id", `a${id}`);
+    li.setAttribute("class", "wrapper");
+    createCompleteBtn(li);
+    createDeleteBtnForElement(li);
+    list.appendChild(li); //order is critical
     elInputAdd.value = "";
-    addDeleteButtonToLi();
-    // console.log(gToDoList);
+    console.log(gToDoList);
   });
 }
+
 addInputToListAndUpdateDataBaseOnClick(gToDoList, elToDoList);
-function deleteLiFromListOnClick(params) {}
+addClassToElementsByClassOnClick(
+  elOnlyUncompletedBtn,
+  "complete",
+  "displayNone"
+);
