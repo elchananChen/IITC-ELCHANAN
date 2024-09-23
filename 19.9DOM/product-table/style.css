@@ -5,7 +5,7 @@
   padding: 0px;
   margin: 0px;
 }
-html,
+/* html, */
 body {
   height: 100%;
 }
@@ -14,10 +14,10 @@ article {
   display: flex;
   justify-content: center;
   background-color: var(--color--300);
-  /* align-items: center; */
 }
 
 .wrapper {
+  height: 100%;
   margin-top: 3rem;
   background-color: var(--color--400);
   border-radius: 8px;
@@ -35,4 +35,31 @@ td {
 }
 h1 {
   color: var(--color--500);
+}
+.counter-row td {
+  padding-top: 1rem;
+  color: var(--color--500);
+  font-weight: bold;
+  font-size: large;
+}
+ul {
+  margin-inline: 1.5rem;
+  list-style-type: none;
+}
+.span-display {
+  flex: 1;
+  text-align: left;
+}
+.products-display {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  /* column-gap: 5rem; */
+}
+.li-display {
+  display: flex;
+  margin-block: 0.25rem;
+  /* flex-basis: 100rem; */
+  justify-content: space-around;
 }
