@@ -1,0 +1,99 @@
+@import url("./css/reset.css");
+
+header {
+  padding-block: 1rem;
+  background-color: aquamarine;
+}
+article {
+  background-color: aqua;
+}
+h1 {
+  position: relative;
+  text-align: center;
+  display: block;
+  font-size: 2.5rem;
+}
+
+table {
+  position: relative;
+  left: 5%;
+  border-collapse: collapse;
+  width: 90%;
+}
+td {
+  padding-block: 1rem;
+  padding-left: 0.5rem;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.179);
+}
+tr:last-child td {
+  border-bottom: 0;
+}
+tr {
+  color: green;
+}
+
+.filters {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  column-gap: 1rem;
+  width: 50%;
+}
+.filter {
+  padding-block: 1rem;
+  font-size: 1.25rem;
+  background-color: rgb(8, 235, 235);
+  border-collapse: collapse;
+  border: 1.5px solid rgba(0, 0, 0, 0.179);
+  transition: transform 0.3s ease;
+  transition: 0.3s ease;
+  /* border-bottom: 0px; */
+  /* border-right: 0px; */
+}
+.filter:hover {
+  box-shadow: 0px 0px 2px 1rem rgb(8, 235, 235);
+
+  background-color: aquamarine;
+  transform: scale(1.1);
+  /* rotate(-360deg); */
+}
+.fixed {
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  z-index: 99999;
+}
+.absolut {
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+}
+.emoji {
+  cursor: pointer;
+}
+
+.update-form {
+}
+.hidden {
+  display: none;
+}
+
+input {
+  background-color: rgba(2, 186, 253, 0.992);
+  margin-bottom: 0.25rem;
+  /* background-color: transparent; */
+}
+
+.choose-btn {
+  position: relative;
+  background-color: transparent;
+  border: 0px;
+  font-size: 1.5rem;
+  color: gray;
+  border-radius: 5px;
+}
+.choose-btn:hover {
+  background-color: bisque;
+  color: rgb(6, 244, 6);
+}

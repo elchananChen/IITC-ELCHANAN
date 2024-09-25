@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+   * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        font-size: 30px;
+      }
+
+      .visible {
+       
+        position: fixed;
+        right: 20px;
+        top: 2rem;
+        z-index: 9999;
+      }
+   
+      .visible .none{ 
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: -2px;
+        padding-top: 40px;
+        background: transparent;
+        color: brown;
+      }      
+      .visible:hover .none {
+        display: block;
+      }
+      .visible:hover {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="visible">
+      asdfg
+      <div class="none">
+        <span>1 hidden</span>
+        <span>2 hidden</span>
+        <span>3 hidden</span>
+      </div>
+     
+    </p>
+    <p>
+      <span>1adsfkjasdlf</span>
+      <span>2adsfkjasdlf</span>
+      <span>3adsfkjasdlf</span>
+      <span>4adsfkjasdlf</span>
+      <span>5adsfkjasdlf</span>
+    </p>
+  </body>
+</html>

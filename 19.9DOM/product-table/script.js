@@ -103,7 +103,7 @@ function deleteFromArryByID(arr, elId) {
     }
   }
   renderOrderArr(gOrder);
-  console.log(gOrder);
+  // console.log(gOrder);
 }
 
 //RENDER ORDER ARRAY TO TABLE
