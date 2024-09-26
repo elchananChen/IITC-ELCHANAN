@@ -14,6 +14,36 @@ h1 {
   font-size: 2.5rem;
 }
 
+.filters {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  column-gap: 1rem;
+}
+.filter {
+  padding-block: 0.5rem;
+  font-size: 1rem;
+  background-color: rgb(8, 235, 235);
+  border-collapse: collapse;
+  border: 1.5px solid rgba(0, 0, 0, 0.179);
+  transition: transform 0.3s ease;
+  transition: 0.3s ease;
+}
+.fire-btn {
+  grid-column: span 2;
+}
+.filter:hover {
+  box-shadow: 0px 0px 2px 1rem rgb(8, 235, 235);
+  background-color: aquamarine;
+  transform: scale(1.1);
+}
+.pre-choose.pre-choose.pre-choose {
+  transition: none;
+  transform: none;
+  box-shadow: none;
+  background-color: rgb(8, 235, 235);
+}
 table {
   position: relative;
   left: 5%;
@@ -32,32 +62,6 @@ tr {
   color: green;
 }
 
-.filters {
-  margin: 5%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  column-gap: 1rem;
-  width: 50%;
-}
-.filter {
-  padding-block: 1rem;
-  font-size: 1.25rem;
-  background-color: rgb(8, 235, 235);
-  border-collapse: collapse;
-  border: 1.5px solid rgba(0, 0, 0, 0.179);
-  transition: transform 0.3s ease;
-  transition: 0.3s ease;
-  /* border-bottom: 0px; */
-  /* border-right: 0px; */
-}
-.filter:hover {
-  box-shadow: 0px 0px 2px 1rem rgb(8, 235, 235);
-
-  background-color: aquamarine;
-  transform: scale(1.1);
-  /* rotate(-360deg); */
-}
 .fixed {
   position: fixed;
   bottom: 3rem;
@@ -86,14 +90,17 @@ input {
 }
 
 .choose-btn {
-  position: relative;
   background-color: transparent;
   border: 0px;
-  font-size: 1.5rem;
+  padding-bottom: 5px;
+  font-size: 1rem;
   color: gray;
   border-radius: 5px;
 }
 .choose-btn:hover {
   background-color: bisque;
   color: rgb(6, 244, 6);
+}
+.choosen {
+  background-color: rgb(255, 107, 33);
 }

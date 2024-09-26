@@ -16,8 +16,15 @@ function saveToStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
+function toggelFormByClass(element, form, clas) {
+  element.addEventListener("click", () => {
+    form.classList.toggle(clas);
+  });
+}
+
 export const utils = {
   getFromStorage,
   saveToStorage,
   makeId,
+  toggelFormByClass,
 };

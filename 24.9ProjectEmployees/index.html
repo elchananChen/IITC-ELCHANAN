@@ -9,7 +9,7 @@
   <body>
     <div class="visible fixed">
       <div class="add-emoji emoji">📗</div>
-      <form class="hidden absolut add-form">
+      <form id="employee-form" class="hidden absolut add-form">
         new employee
         <input
           type="text"
@@ -53,7 +53,7 @@
           placeholder="salary"
           required
         />
-        <button>submit</button>
+        <button id="new-btn">submit</button>
       </form>
 
       <div class="update-emoji emoji">✍</div>
@@ -82,70 +82,22 @@
     </div>
     <header><h1>employees</h1></header>
     <article>
-      <main>
-        <table class="table">
-          <tr class="tr-th">
-            <th class="th">first name</th>
-            <th class="th">last name</th>
-            <th class="th">age</th>
-            <th class="th">start date</th>
-            <th class="th">department</th>
-            <th class="th">salary</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-          </tr>
-        </table>
-      </main>
       <aside class="filters">
-        <button class="filter">filter1</button>
-        <button class="filter">filter2</button>
-        <button class="filter">filter3</button>
-        <button class="filter">filter4</button>
-        <button class="filter">filter5</button>
-        <button class="filter">filter6</button>
-        <button class="filter">filter7</button>
-        <button class="filter">filter8</button>
-        <button class="filter delete-btn pre-choose choose">fire</button>
+        <button class="filter">by category</button>
+        <button class="filter">by age up</button>
+        <button class="filter">by age down</button>
+        <button class="filter">by age renge</button>
+        <button class="filter">by name</button>
+        <button class="filter">by last name</button>
+        <button class="filter">by salary</button>
+        <button class="filter">by start date</button>
+        <button class="filter fire-btn pre-choose">🚬🔫 fire 😈😈</button>
       </aside>
+      <main>
+        <table class="table"></table>
+      </main>
     </article>
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque est placeat
-      sit temporibus porro assumenda consequatur, vel nobis excepturi sunt earum
-      fugit quaerat facilis ipsa ut nulla laborum vitae expedita amet. Velit
-      suscipit omnis, similique ipsum doloribus sequi. Soluta amet dolorem unde
-      qui iure iste eligendi et sunt eaque. Alias optio possimus voluptas
-      repellat fuga, perspiciatis inventore temporibus voluptate praesentium
-      blanditiis aut illum quidem accusantium adipisci, aspernatur saepe
-      incidunt maxime quas corporis necessitatibus, odit ab officia. Ullam modi
-      unde ut repellat aperiam consectetur autem quam animi atque reiciendis
-      sequi rem aut possimus eligendi voluptatem cupiditate, quaerat laboriosam
-      facere nobis aliquid qui soluta! Distinctio porro quos voluptate sit
-      repudiandae itaque nobis, explicabo nihil libero reprehenderit officia
-      soluta nisi odio aspernatur quas vitae molestias voluptatibus. Ullam porro
-      aspernatur ex ipsum laborum suscipit, quas architecto dignissimos
-      reprehenderit eius quasi facilis inventore doloribus nulla aperiam cumque
-      quod labore natus deserunt voluptatem atque doloremque. A nisi, voluptate
-      aut non necessitatibus veniam, aspernatur repudiandae beatae unde
-      reiciendis rerum eius consequuntur molestias officia exercitationem omnis
-      magnam porro dolorum sint? Sed distinctio aperiam eaque illo, veritatis
-      animi, tempore possimus ratione accusantium eius molestiae, eum sapiente
-      vel doloribus quibusdam. Qui doloribus suscipit ducimus assumenda repellat
-      dolores, cum corporis nihil.
-    </div>
+
     <script type="module" src="controller.js"></script>
   </body>
 </html>
