@@ -76,9 +76,9 @@ tr {
 .emoji {
   cursor: pointer;
 }
-
+/* 
 .update-form {
-}
+} */
 .hidden {
   display: none;
 }
@@ -101,6 +101,6 @@ input {
   background-color: bisque;
   color: rgb(6, 244, 6);
 }
-.choosen {
+.choosenOne {
   background-color: rgb(255, 107, 33);
 }

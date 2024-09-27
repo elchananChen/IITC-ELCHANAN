@@ -53,33 +53,47 @@ onlyOpen(addEmoji, updateForm);
 const chooseBtns = document.querySelectorAll(".choose-btn");
 const fireBtn = document.querySelector(".fire-btn");
 
-function btnToAddClassChoose(element, clas) {
-  chooseBtns.forEach((chooseBtn) => {
+function toggleClasIfClassChoosenOneExist(arr, element, clas) {
+  arr.forEach((el) => {
     if (typeof clas === "string") {
-      chooseBtn.addEventListener("click", (ev) => {
-        element.classList.toggle(clas);
-        console.log(element);
+      el.addEventListener("click", (ev) => {
+        const check = document.querySelector(".choosenOne");
+        element.classList.toggle(clas, check);
       });
     } else {
-      console.log("typeof clas in btnToAddClassChoose have to be string");
+      console.log(
+        "typeof clas in toggleClasIfClassChoosenOneExist have to be string"
+      );
     }
   });
 }
 
-btnToAddClassChoose(fireBtn, "toFireChoosen");
-btnToAddClassChoose(updateImoji, "toUpdetChoosen");
-
-function btnToAddClassChooseToNearestTr(btn) {
-  btn.addEventListener("click", (ev) => {
-    const row = ev.target.closest("tr");
-    console.log(row);
-    if (row) {
-      row.classList.toggle("choosenOne");
-    }
-  });
+function toggleUniqueClassToClosestSpecificElement(arr, clas, elementName) {
+  if (typeof clas === "string" && typeof elementName === "string") {
+    arr.forEach((item) => {
+      item.addEventListener("click", (ev) => {
+        arr.forEach((el) => {
+          if (ev.target !== el) {
+            el.closest(elementName).classList.remove(clas);
+          }
+        });
+        if (item.closest(elementName)) {
+          // baba( fireBtn, "toFireChoosen");
+          // baba( updateImoji, "toUpdetChoosen");
+          item.closest(elementName).classList.toggle(clas);
+        }
+      });
+    });
+  } else {
+    console.log(
+      "typeof clas in toggelUniqueClassToClosestSpecificElement have to be string"
+    );
+  }
 }
 
-// btnToAddClassChooseToNearestTr(chooseBtn);
+toggleUniqueClassToClosestSpecificElement(chooseBtns, "choosenOne", "tr"); // order importent
+toggleClasIfClassChoosenOneExist(chooseBtns, fireBtn, "toFireChoosen");
+toggleClasIfClassChoosenOneExist(chooseBtns, updateImoji, "toUpdetChoosen");
 // contains("chosenOne")
 
 export const controller = {
