@@ -27,6 +27,20 @@ function renderAll(arr) {
 
 renderAll(emploeesService.gEmploees);
 
+// WARNING WHEN NOT CHOOSE AND WENT TO UPDATE
+function popUpWarning() {
+  const updateEmoji = document.querySelector(".update-emoji");
+  const warning = document.querySelector(".warning");
+  updateEmoji.addEventListener("mouseenter", function () {
+    if (!updateImoji.classList.contains("toUpdateChoosen")) {
+      warning.classList.remove("hidden"); // מראה את הטקסט
+    }
+  });
+  updateEmoji.addEventListener("mouseleave", function () {
+    warning.classList.add("hidden"); // מסתיר את הטקסט
+  });
+}
+popUpWarning();
 // HIDDEN "ADD NEW EMPLOYEE FORM" TOGGLE
 const addEmoji = document.querySelector(".add-emoji");
 const addForm = document.querySelector(".add-form");
@@ -36,14 +50,22 @@ utils.toggelFormByClass(addEmoji, addForm, "hidden");
 
 const updateImoji = document.querySelector(".update-emoji");
 const updateForm = document.querySelector(".update-form");
-utils.toggelFormByClass(updateImoji, updateForm, "hidden");
+
+function toggelFormByClassIfContainsOtherClass(element, form, clas) {
+  element.addEventListener("click", () => {
+    if (updateImoji.classList.contains("toUpdateChoosen")) {
+      form.classList.toggle(clas);
+    }
+  });
+}
+toggelFormByClassIfContainsOtherClass(updateImoji, updateForm, "hidden");
+// ONLY ONE INPUT OPEN AT A TIME
 
 function onlyOpen(toOpen, toHidde) {
   toOpen.addEventListener("click", () => {
     toHidde.classList.add("hidden");
   });
 }
-// ONLY ONE INPUT OPEN AT A TIME
 
 onlyOpen(updateImoji, addForm);
 onlyOpen(addEmoji, updateForm);
@@ -78,8 +100,6 @@ function toggleUniqueClassToClosestSpecificElement(arr, clas, elementName) {
           }
         });
         if (item.closest(elementName)) {
-          // baba( fireBtn, "toFireChoosen");
-          // baba( updateImoji, "toUpdetChoosen");
           item.closest(elementName).classList.toggle(clas);
         }
       });
@@ -93,7 +113,8 @@ function toggleUniqueClassToClosestSpecificElement(arr, clas, elementName) {
 
 toggleUniqueClassToClosestSpecificElement(chooseBtns, "choosenOne", "tr"); // order importent
 toggleClasIfClassChoosenOneExist(chooseBtns, fireBtn, "toFireChoosen");
-toggleClasIfClassChoosenOneExist(chooseBtns, updateImoji, "toUpdetChoosen");
+toggleClasIfClassChoosenOneExist(chooseBtns, updateImoji, "toUpdateChoosen");
+
 // contains("chosenOne")
 
 export const controller = {

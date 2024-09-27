@@ -76,9 +76,7 @@ tr {
 .emoji {
   cursor: pointer;
 }
-/* 
-.update-form {
-} */
+
 .hidden {
   display: none;
 }
@@ -86,7 +84,6 @@ tr {
 input {
   background-color: rgba(2, 186, 253, 0.992);
   margin-bottom: 0.25rem;
-  /* background-color: transparent; */
 }
 
 .choose-btn {
@@ -96,6 +93,7 @@ input {
   font-size: 1rem;
   color: gray;
   border-radius: 5px;
+  cursor: pointer;
 }
 .choose-btn:hover {
   background-color: bisque;
@@ -103,4 +101,25 @@ input {
 }
 .choosenOne {
   background-color: rgb(255, 107, 33);
+}
+
+.update-emoji {
+  position: relative;
+}
+
+.warning {
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  right: 1rem;
+  z-index: 1;
+  font-size: small;
+}
+.h-form {
+  background-color: black;
+  color: white;
 }
