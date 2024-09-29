@@ -128,7 +128,7 @@ console.log(elNameFilterInput);
 
 const elNameFilterBtn = document.querySelector("#name-filter-btn");
 console.log(elNameFilterBtn);
-
+const elByNameWrapper = document.querySelector(".by-name-wrapper");
 const elNames = document.querySelectorAll(".elName");
 
 function filterByName(btn, elInput, elArr) {
@@ -136,19 +136,18 @@ function filterByName(btn, elInput, elArr) {
     elArr.forEach((element) => {
       if (element.textContent !== elInput.value) {
         element.closest("tr").classList.add("hidden");
+        elByNameWrapper.classList.add("hidden");
       }
     });
   });
 }
 
 const elShowAllBtn = document.querySelector("#show-all");
-console.log(elShowAllBtn);
-
 const elArrTr = document.querySelectorAll("tr");
 const trArr = Array.from(elArrTr);
 console.log(trArr);
 function showAll(btn, trArr) {
-  btn.addEventListener("cllick", () => {
+  btn.addEventListener("click", () => {
     trArr.forEach((element) => {
       element.classList.remove("hidden");
     });
