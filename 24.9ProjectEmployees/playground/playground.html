@@ -37,6 +37,27 @@
       .visible:hover {
         color: red;
       }
+      .toggle-button {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    display: none; /* מסתיר את תיבת הסימון */
+}
+
+input[type="checkbox"]:checked + span {
+    background-color: lightblue; /* צבע שונה כאשר הכפתור פעיל */
+    color: white;
+}
+.form-group {
+    border: 1px solid gray; /* גבול רגיל */
+    padding: 10px;
+}
+
+.form-group:focus-within {
+    border-color: blue; /* גבול כחול כשיש פוקוס על שדה הקלט או על הקונטיינר */
+}
+
     </style>
   </head>
   <body>
@@ -56,5 +77,14 @@
       <span>4adsfkjasdlf</span>
       <span>5adsfkjasdlf</span>
     </p>
+    <label class="toggle-button">
+      <input type="checkbox" id="toggle">
+      <span>לחץ עלי</span>
+  </label>
+  <div class="form-group">
+    <label for="name">שם:</label>
+    <input type="text" id="name" placeholder="הכנס את שמך">
+</div>
+
   </body>
 </html>

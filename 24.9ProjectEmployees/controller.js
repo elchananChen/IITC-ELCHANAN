@@ -14,12 +14,12 @@ function renderAll(arr) {
 `;
   arr.forEach((currentEmployee) => {
     elTable.innerHTML += `<tr>
-              <td>${currentEmployee.firstName}</td>
-              <td>${currentEmployee.lastName}</td>
-              <td>${currentEmployee.age}</td>
-              <td>${currentEmployee.startDate}</td>
-              <td>${currentEmployee.department}</td>
-              <td>${currentEmployee.salary}</td>
+              <td class="elName">${currentEmployee.firstName}</td>
+              <td class="elLastName">${currentEmployee.lastName}</td>
+              <td class="elAge">${currentEmployee.age}</td>
+              <td class="elstartDate">${currentEmployee.startDate}</td>
+              <td class="eldepartment">${currentEmployee.department}</td>
+              <td class="elsalary">${currentEmployee.salary}</td>
               <td> <button id="${currentEmployee.id}" class="choose-btn">👈</button> </td>
             </tr>`;
   });
@@ -121,6 +121,43 @@ function toggleUniqueClassToClosestSpecificElement(arr, clas, elementName) {
     );
   }
 }
+
+// FILTERS
+const elNameFilterInput = document.querySelector("#name-input");
+console.log(elNameFilterInput);
+
+const elNameFilterBtn = document.querySelector("#name-filter-btn");
+console.log(elNameFilterBtn);
+
+const elNames = document.querySelectorAll(".elName");
+
+function filterByName(btn, elInput, elArr) {
+  btn.addEventListener("click", () => {
+    elArr.forEach((element) => {
+      if (element.textContent !== elInput.value) {
+        element.closest("tr").classList.add("hidden");
+      }
+    });
+  });
+}
+
+const elShowAllBtn = document.querySelector("#show-all");
+console.log(elShowAllBtn);
+
+const elArrTr = document.querySelectorAll("tr");
+const trArr = Array.from(elArrTr);
+console.log(trArr);
+function showAll(btn, trArr) {
+  btn.addEventListener("cllick", () => {
+    trArr.forEach((element) => {
+      element.classList.remove("hidden");
+    });
+  });
+}
+
+showAll(elShowAllBtn, trArr);
+
+filterByName(elNameFilterBtn, elNameFilterInput, elNames);
 
 export const controller = {
   renderAll,

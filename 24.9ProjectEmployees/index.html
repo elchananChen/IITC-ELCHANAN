@@ -55,7 +55,6 @@
         />
         <button id="new-btn">submit</button>
       </form>
-
       <div class="update-emoji emoji">✍</div>
       <div class="hidden warning">choose employee</div>
       <form class="hidden absolut update-form">
@@ -86,7 +85,7 @@
         <header><h1>Employees Management</h1></header>
         <aside class="filters">
           <button class="filter age-btn">by age renge</button>
-          <div class="by-age-wrapper hidden">
+          <div class="by-age-wrapper filter-wrapper hidden">
             <input
               type="number"
               id="start-age-input"
@@ -101,13 +100,38 @@
             />
             <button>submit</button>
           </div>
-          <button class="filter">show all</button>
+          <button id="show-all" class="filter">show all</button>
           <button class="filter">by name</button>
+          <div class="by-name-wrapper filter-wrapper">
+            <input type="text" id="name-input" placeholder="name" />
+            <button id="name-filter-btn">submit</button>
+          </div>
           <button class="filter">by last name</button>
+          <div class="by-name-wrapper filter-wrapper hidden">
+            <input type="text" id="last-name-input" placeholder="last name" />
+            <button>submit</button>
+          </div>
           <button class="filter">by start date</button>
+          <div class="by-name-wrapper filter-wrapper hidden">
+            <input type="date" id="start-date-input" placeholder="start-date" />
+            <button>submit</button>
+          </div>
           <button class="filter larger">by category</button>
+          <div class="by-name-wrapper filter-wrapper hidden">
+            <input type="text" id="category-input" placeholder="category" />
+            <button>submit</button>
+          </div>
           <button class="filter fire-btn pre-choose">🚬🔫 fire 😈😈</button>
           <button class="filter larger">by salary</button>
+          <div class="by-name-wrapper filter-wrapper hidden">
+            <input
+              type="number"
+              id="salary-input"
+              placeholder="salary"
+              required
+            />
+            <button>submit</button>
+          </div>
         </aside>
         <main>
           <table class="table"></table>

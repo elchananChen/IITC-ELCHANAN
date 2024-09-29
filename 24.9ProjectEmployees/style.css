@@ -42,6 +42,7 @@ h1 {
   transition: 0.3s ease;
   cursor: pointer;
 }
+
 .larger {
   grid-column: span 3;
 }
@@ -53,12 +54,29 @@ h1 {
   background-color: var(--color-orange-400);
   transform: scale(1.2);
 }
+.filter:focus {
+  transform: scale(1);
+  box-shadow: 0px 0px 0px 0rem var(--color-orange-200);
+}
 .pre-choose.pre-choose {
   transition: none;
   transform: none;
   box-shadow: none;
   cursor: default;
   background-color: transparent;
+}
+.filter-wrapper {
+  position: absolute;
+  display: grid;
+  background-color: var(--color-orange-300);
+  top: 3rem;
+}
+.filter-wrapper button {
+  background-color: transparent;
+  border: 3px solid var(--color-orange-400);
+  border-bottom: solid var(--color-yellow-300);
+  border-inline-end: solid var(--color-yellow-300);
+  cursor: pointer;
 }
 .toFireChosen.toFireChosen {
   cursor: pointer;
@@ -93,6 +111,8 @@ td {
   position: absolute;
   bottom: 0;
   right: 2rem;
+}
+.relative {
 }
 .emoji {
   cursor: pointer;
