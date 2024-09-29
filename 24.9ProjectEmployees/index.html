@@ -22,7 +22,7 @@
           type="text"
           class="input"
           id="last-name"
-          placeholder="first-name"
+          placeholder="last-name"
           required
         />
         <input
@@ -78,25 +78,41 @@
           placeholder="update-salary"
           required
         />
-        <button>submit</button>
+        <button id="update-btn">submit</button>
       </form>
     </div>
-    <header><h1>employees</h1></header>
     <article>
-      <aside class="filters">
-        <button class="filter">by category</button>
-        <button class="filter">by age up</button>
-        <button class="filter">by age down</button>
-        <button class="filter">by age renge</button>
-        <button class="filter">by name</button>
-        <button class="filter">by last name</button>
-        <button class="filter">by salary</button>
-        <button class="filter">by start date</button>
-        <button class="filter fire-btn pre-choose">🚬🔫 fire 😈😈</button>
-      </aside>
-      <main>
-        <table class="table"></table>
-      </main>
+      <div class="wrapper">
+        <header><h1>Employees Management</h1></header>
+        <aside class="filters">
+          <button class="filter age-btn">by age renge</button>
+          <div class="by-age-wrapper hidden">
+            <input
+              type="number"
+              id="start-age-input"
+              placeholder="start age"
+              required
+            />
+            <input
+              type="number"
+              id="end-age-input"
+              placeholder="end-age"
+              required
+            />
+            <button>submit</button>
+          </div>
+          <button class="filter">show all</button>
+          <button class="filter">by name</button>
+          <button class="filter">by last name</button>
+          <button class="filter">by start date</button>
+          <button class="filter larger">by category</button>
+          <button class="filter fire-btn pre-choose">🚬🔫 fire 😈😈</button>
+          <button class="filter larger">by salary</button>
+        </aside>
+        <main>
+          <table class="table"></table>
+        </main>
+      </div>
     </article>
 
     <script type="module" src="controller.js"></script>

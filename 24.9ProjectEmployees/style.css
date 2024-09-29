@@ -1,11 +1,18 @@
+@import url("./css/colors.css");
 @import url("./css/reset.css");
 
 header {
   padding-block: 1rem;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 article {
-  background-color: aqua;
+  background-color: var(--color-turquoise-300);
+  padding-block: 2rem;
+  padding-inline: 2rem;
+}
+.wrapper {
+  background-color: var(--color-orange-300);
+  border-radius: 0.5rem;
 }
 h1 {
   position: relative;
@@ -15,34 +22,55 @@ h1 {
 }
 
 .filters {
+  position: sticky;
+  top: 1rem;
   margin: 5%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  column-gap: 1rem;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0.5rem;
+  column-gap: 0.5rem;
+  z-index: 2;
 }
 .filter {
-  padding-block: 0.5rem;
-  font-size: 1rem;
-  background-color: rgb(8, 235, 235);
+  padding-block: 0.25rem;
+  font-size: 0.5rem;
+  grid-column: span 2;
+  background-color: var(--color-orange-200);
   border-collapse: collapse;
-  border: 1.5px solid rgba(0, 0, 0, 0.179);
+  border: 0px solid rgba(0, 0, 0, 0.179);
   transition: transform 0.3s ease;
   transition: 0.3s ease;
+  cursor: pointer;
+}
+.larger {
+  grid-column: span 3;
 }
 .fire-btn {
-  grid-column: span 2;
+  grid-column: span 4;
 }
 .filter:hover {
-  box-shadow: 0px 0px 2px 1rem rgb(8, 235, 235);
-  background-color: aquamarine;
-  transform: scale(1.1);
+  box-shadow: 0px 0px 2px 1rem var(--color-orange-200);
+  background-color: var(--color-orange-400);
+  transform: scale(1.2);
 }
-.pre-choose.pre-choose.pre-choose {
+.pre-choose.pre-choose {
   transition: none;
   transform: none;
   box-shadow: none;
-  background-color: rgb(8, 235, 235);
+  cursor: default;
+  background-color: transparent;
+}
+.toFireChosen.toFireChosen {
+  cursor: pointer;
+  background-color: var(--color-turquoise-400);
+
+  /* transition: transform 0.3s ease;
+  transition: 0.3s ease; */
+}
+.toFireChosen.toFireChosen:hover {
+  transform: scale(2);
+  transition: transform 0.3s ease;
+  box-shadow: 0px 0px 2px 1rem var(--color-orange-200);
 }
 table {
   position: relative;
@@ -53,13 +81,6 @@ table {
 td {
   padding-block: 1rem;
   padding-left: 0.5rem;
-  border-bottom: 1.5px solid rgba(0, 0, 0, 0.179);
-}
-tr:last-child td {
-  border-bottom: 0;
-}
-tr {
-  color: green;
 }
 
 .fixed {
@@ -81,11 +102,6 @@ tr {
   display: none;
 }
 
-input {
-  background-color: rgba(2, 186, 253, 0.992);
-  margin-bottom: 0.25rem;
-}
-
 .choose-btn {
   background-color: transparent;
   border: 0px;
@@ -99,8 +115,9 @@ input {
   background-color: bisque;
   color: rgb(6, 244, 6);
 }
-.choosenOne {
-  background-color: rgb(255, 107, 33);
+.chosenOne {
+  background-color: var(--color-orange-400);
+  border: 1rem solid var(--color-turquoise-400);
 }
 
 .update-emoji {
@@ -119,7 +136,62 @@ input {
   z-index: 1;
   font-size: small;
 }
+form {
+  background-color: var(--color-orange-300);
+}
+
+input {
+  background-color: transparent;
+  border: 3px solid var(--color-orange-400);
+  border-bottom: solid var(--color-yellow-300);
+  border-inline-end: solid var(--color-yellow-300);
+  margin-bottom: 0.25rem;
+}
 .h-form {
-  background-color: black;
-  color: white;
+  text-align: center;
+  color: var(--color-yellow-300);
+  font-size: large;
+}
+form button {
+  background-color: transparent;
+  border: 3px solid var(--color-orange-400);
+  border-bottom: solid var(--color-yellow-300);
+  border-inline-end: solid var(--color-yellow-300);
+  cursor: pointer;
+}
+form button:hover {
+  transform: scale(1.1);
+}
+
+input::placeholder {
+  color: var(--color-turquoise-100);
+}
+input:focus::placeholder {
+  color: black;
+}
+@media (max-width: 460px) {
+  html {
+    font-size: 15px;
+  }
+  .wrapper {
+    border-radius: 0rem;
+  }
+  article {
+    padding: 0px;
+  }
+  tr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  tr td:last-child {
+    grid-column: span 2;
+    text-align: right;
+  }
+}
+
+@media (min-width: 625px) {
+  article {
+    padding-inline: 6rem;
+    padding-block: 3rem;
+  }
 }

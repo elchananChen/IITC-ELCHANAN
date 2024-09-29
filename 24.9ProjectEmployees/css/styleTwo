@@ -1,0 +1,144 @@
+@import url("./css/reset.css");
+
+header {
+  padding-block: 1rem;
+  background-color: aquamarine;
+}
+article {
+  background-color: aqua;
+}
+h1 {
+  position: relative;
+  text-align: center;
+  display: block;
+  font-size: 2.5rem;
+}
+
+.filters {
+  position: sticky;
+  top: 1rem;
+  margin: 5%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0.5rem;
+  column-gap: 0.5rem;
+  z-index: 2;
+}
+.filter {
+  padding-block: 0.25rem;
+  font-size: 0.5rem;
+  grid-column: span 2;
+  background-color: rgb(8, 235, 235);
+  border-collapse: collapse;
+  border: 1.5px solid rgba(0, 0, 0, 0.179);
+  transition: transform 0.3s ease;
+  transition: 0.3s ease;
+}
+.larger {
+  grid-column: span 3;
+}
+.fire-btn {
+  grid-column: span 4;
+}
+.filter:hover {
+  box-shadow: 0px 0px 2px 1rem rgb(8, 235, 235);
+  background-color: aquamarine;
+  transform: scale(1.4);
+}
+.pre-choose.pre-choose {
+  transition: none;
+  transform: none;
+  box-shadow: none;
+  background-color: rgb(8, 235, 235);
+}
+.toFireChosen.toFireChosen {
+  cursor: pointer;
+  background-color: blueviolet;
+
+  /* transition: transform 0.3s ease;
+  transition: 0.3s ease; */
+}
+.toFireChosen.toFireChosen:hover {
+  transform: scale(2);
+  transition: transform 0.4s ease;
+  box-shadow: 0px 0px 2px 1rem rgb(8, 235, 235);
+}
+table {
+  position: relative;
+  left: 5%;
+  border-collapse: collapse;
+  width: 90%;
+}
+td {
+  padding-block: 1rem;
+  padding-left: 0.5rem;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.179);
+}
+tr:last-child td {
+  border-bottom: 0;
+}
+tr {
+  color: green;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  z-index: 99999;
+}
+.absolut {
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+}
+.emoji {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  background-color: rgba(2, 186, 253, 0.992);
+  margin-bottom: 0.25rem;
+}
+
+.choose-btn {
+  background-color: transparent;
+  border: 0px;
+  padding-bottom: 5px;
+  font-size: 1rem;
+  color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.choose-btn:hover {
+  background-color: bisque;
+  color: rgb(6, 244, 6);
+}
+.chosenOne {
+  background-color: rgb(255, 107, 33);
+}
+
+.update-emoji {
+  position: relative;
+}
+
+.warning {
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  right: 1rem;
+  z-index: 1;
+  font-size: small;
+}
+.h-form {
+  background-color: black;
+  color: white;
+}
