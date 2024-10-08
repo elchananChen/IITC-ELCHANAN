@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ATM</h1>
+    </header>
+    <main>
+      <form id="pin-form">
+        <label for="pin" class="pin">password:</label>
+        <input
+          type="text"
+          id="pin-input"
+          class="pin"
+          name="pin"
+          placeholder="enter your password here"
+        ></input>
+        <button id="pin-btn" class="pin">submit</button>
+      </form>
+      <div id="correct-pin-header" class="hidden">
+      <h2 id="greet-correct-pin"></h2>
+      <h3>what are you want to do?</h3>
+    </div>
+    <div id="greet-after-action" class="hidden">great! <br> what you want to do next?</div>
+      <div id="btns-container">
+        <button class="btns hidden" id="withdrawal-btn">cash whithdrawal</button>
+        <button class="btns hidden" id="deposit-btn">deposit funds</button>
+        <button class="btns hidden" id="balance-btn">balance inquiry</button>
+        <button class="btns hidden" id="out-btn">get out</button>
+       </div>
+       <div id="whithdrawal-container" class="hidden">
+        <h2> how match you went to pull?</h2>
+        <h3>(2000 is the limit)</h3>
+        <div id="fixed-amount-container">
+            <p class="fixed-amount-container"><span class="fixed-amount">20 </span><span class="fixed-amount-sign">₪</span></p>
+            <p class="fixed-amount-container"><span class="fixed-amount">50 </span><span class="fixed-amount-sign">₪</span></p>
+            <p class="fixed-amount-container"><span class="fixed-amount">100 </span><span class="fixed-amount-sign">₪</span></p>
+            <p class="fixed-amount-container"><span class="fixed-amount">200 </span><span class="fixed-amount-sign">₪</span></p>
+            <p class="fixed-amount-container"><span class="fixed-amount">500 </span><span class="fixed-amount-sign">₪</span></p>
+        </div>
+        <label for="flexeble-withdrawal">another amount:</label>
+        <input type="number" id="whithdrawal-input" name="flexeble-withdrawal" placeholder="enter number here">
+        <span class="add-btn">done</span>
+        <br>
+        <p class="temporary-amount-container">Temporary amount:  <span id="temporary-amount">0</span>  <span id="sign">₪.</span> <br>  Press 'Print' to print the amount: 
+        </p>
+        <form id="withdrawal-form">
+            <button type="button" id="resetTempereryNum">reset</button>
+           <button>print</button>
+           <button type="button" class="return-btn">return</button>
+        </form>
+       </div>
+       <div id="printed-message" class="hidden">please wait for your money...</div>
+       <div id="deposit-container" class="hidden">
+        <label for="deposit">how mach you want to deposit?</label>
+        <input id="deposit-input" type="number" name="deposit" placeholder="deposit amount">
+       <button id="deposit-submit-btn">deposit</button>
+       <button type="button" class="return-btn">return</button>
+       </div>
+       <div id="balance-container" class="hidden">
+       <div id="balance-display"></div>
+       <button type="button" class="return-btn">return</button>
+       </div>
+    </main>
+    <script src="./controller.js"></script>
+  </body>
+</html>
