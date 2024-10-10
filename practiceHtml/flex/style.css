@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  height: 100%;
+}
+article {
+  background-color: blueviolet;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: red;
+  flex-basis: 240px;
+  flex-grow: 1;
+}
+
+.big-card {
+  background-color: cyan;
+  flex-basis: 250px;
+  flex-grow: 1;
+  padding: 15px;
+}
+.small-card {
+  background-color: khaki;
+  padding: 15px;
+  flex-basis: 200px;
+  flex-grow: 1;
+}
+
+aside {
+  background-color: aquamarine;
+  flex-basis: 100px;
+  flex-grow: 1;
+}
+.aside {
+  background-color: blanchedalmond;
+}
+/* fd */
