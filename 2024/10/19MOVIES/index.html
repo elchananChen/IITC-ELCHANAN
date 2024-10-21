@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <article>
+      <header>
+        <nav>
+          <a href="./index.html">home</a>
+          <a href="./html/about.html">about us</a>
+          <a href="./html/favourites.html">favourites</a>
+        </nav>
+        <div class="hamburger-wrapper">
+          <span>
+            <input
+              type="text"
+              id="saerch-by-name"
+              placeholder="movie name/id"
+            />
+            <button>🔍</button></span
+          >
+          <span class="pointer">sign in</span>
+          <span class="pointer">sign up</span>
+          <select name="categories" id="category-btn">
+            <option value="">s</option>
+            <option value="">a</option>      
+            <option value="">c</option>  
+            <option value="">f</option>
+          </select>
+          <span id="hamburger" class="pointer">☰</span>
+        </div>
+      </header>
+      <main>
+        <div id="hot-movie-wrapper" class="hot-movie-wrapper">
+          <div id="hot-movie-carrousel" class="hot-movie-carrousel">
+            <div class="img-container">
+                <img src="" alt="hot-movie-img" class="hot-movie-img">
+            </div>
+        </div>
+          <div id="hot-movie-aside-carrousel" class="hot-movie-aside">
+            description
+          </div>
+        </div>
+        <div class="category-carrousel">category-carrousel</div>
+        <div class="category-carrousel">category-carrousel</div>
+      </main>
+      <footer>
+        <p>
+          Coded by
+          <a href="https://www.linkedin.com/in/elchanan-chen-0b3037320/"
+            >elchanan chen</a
+          >
+        </p>
+    </footer>
+    <a href="#" class="scroll-to-top">⬆</a>
+</article>
+<p class="attribute" >
+  "This website uses<div class="tmbd-icon">
+      <img src="https://icon.horse/icon/www.themoviedb.org" alt="" />
+    </div> TMDB and the<div class="tmbd-icon">
+      <img src="https://icon.horse/icon/www.themoviedb.org" alt="" />
+    </div> TMDB APIs but is not endorsed,
+  certified, or otherwise approved by TMDB."
+</p>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="module" src="controller.js"></script>
+  </body>
+</html>
+ 
